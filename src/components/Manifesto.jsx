@@ -26,13 +26,10 @@ export default function Manifesto({ manifestoRef, stageRef, meterRef, indexRef, 
             </div>
           </div>
 
-          {/* Right Column: Title, Live Step Counter, Glow Meter & Interactive 3-Phase Statements */}
+          {/* Right Column: Title & Interactive 3-Phase Statements */}
           <div className="manifesto-content">
             <div className="manifesto-header-row">
               <span className="manifesto-pill">✦ MANIFESTE WÔY</span>
-              <span className="manifesto-step-badge" ref={indexRef}>
-                ÉTAPE 01 <i>/</i> 03
-              </span>
             </div>
 
             <h2 id="manifesto-title">
@@ -40,12 +37,6 @@ export default function Manifesto({ manifestoRef, stageRef, meterRef, indexRef, 
               Pas les mêmes<br />
               <em>réflexes.</em>
             </h2>
-
-            <div className="manifesto-meter-track" aria-hidden="true">
-              <div className="manifesto-meter">
-                <i ref={meterRef}></i>
-              </div>
-            </div>
 
             {/* Interactive Step Cards that illuminate in sequence with scroll scrub */}
             <div className="manifesto-cards" ref={statementRef}>

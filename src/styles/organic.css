@@ -758,7 +758,6 @@ p{color:#554c3b}
 .manifesto-header-row{
   display: flex !important;
   align-items: center !important;
-  justify-content: space-between !important;
   gap: 14px !important;
 }
 
@@ -769,61 +768,18 @@ p{color:#554c3b}
   text-transform: uppercase !important;
 }
 
-.manifesto-step-badge{
-  display: inline-block !important;
-  font: 800 11px/1 Manrope,sans-serif !important;
-  letter-spacing: 1.5px !important;
-  color: #fff6e0 !important;
-  background: rgba(220,175,60,0.18) !important;
-  border: 1px solid rgba(225,185,85,0.45) !important;
-  padding: 6px 14px !important;
-  border-radius: 20px !important;
-  text-transform: uppercase !important;
-}
-.manifesto-step-badge i{
-  font-style: normal !important;
-  color: #9a8357 !important;
-  margin: 0 4px !important;
-}
-
 .manifesto h2{
   font-size: clamp(40px, 4.4vw, 62px) !important;
   line-height: 1.06 !important;
   letter-spacing: -0.05em !important;
   color: #fff9ed !important;
-  margin: 0 !important;
+  margin: 0 0 8px 0 !important;
 }
 .manifesto h2 em{
   font-style: italic !important;
   font-family: Georgia, serif !important;
   color: #e2ba64 !important;
   font-weight: 400 !important;
-}
-
-/* Golden Meter Track */
-.manifesto-meter-track{
-  width: 100% !important;
-  height: 3px !important;
-  background: rgba(85,73,50,0.35) !important;
-  border-radius: 3px !important;
-  overflow: hidden !important;
-  margin: 2px 0 8px !important;
-}
-.manifesto-meter{
-  width: 100% !important;
-  height: 100% !important;
-  position: relative !important;
-  display: block !important;
-  margin: 0 !important;
-}
-.manifesto-meter i{
-  display: block !important;
-  height: 100% !important;
-  width: 0% !important;
-  background: linear-gradient(90deg, #bfa058 0%, #fae298 70%, #fffbf0 100%) !important;
-  box-shadow: 0 0 12px rgba(240,195,80,0.7) !important;
-  border-radius: 3px !important;
-  transition: width 0.08s linear !important;
 }
 
 /* 3-Phase Scroll Scrub Cards */
