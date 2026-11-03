@@ -10,6 +10,47 @@ export default function ProductSection({ appWindowRef }) {
       <div className="container">
         <div className="center-heading reveal">
           <div className="section-orb" aria-hidden="true"></div>
+          <div className="section-astrolabe" aria-hidden="true">
+            <svg viewBox="0 0 100 100" width="85" height="85" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <radialGradient id="astrolabeCore" cx="35%" cy="30%" r="65%">
+                  <stop offset="0%" stopColor="#fffdf6" />
+                  <stop offset="35%" stopColor="#fae6aa" />
+                  <stop offset="70%" stopColor="#cfa038" />
+                  <stop offset="100%" stopColor="#7a5516" />
+                </radialGradient>
+                <radialGradient id="astrolabeHalo" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stopColor="#edd5a7" stopOpacity="0.4" />
+                  <stop offset="100%" stopColor="#edd5a7" stopOpacity="0" />
+                </radialGradient>
+                <linearGradient id="ringGoldA" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#fff8e7" />
+                  <stop offset="30%" stopColor="#eec76d" />
+                  <stop offset="70%" stopColor="#966c1e" />
+                  <stop offset="100%" stopColor="#fad780" />
+                </linearGradient>
+                <linearGradient id="ringGoldB" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stopColor="#fffef8" />
+                  <stop offset="45%" stopColor="#d8a842" />
+                  <stop offset="85%" stopColor="#724d14" />
+                  <stop offset="100%" stopColor="#fae29a" />
+                </linearGradient>
+                <filter id="astrolabeFilter" x="-30%" y="-30%" width="160%" height="160%">
+                  <feDropShadow dx="0" dy="12" stdDeviation="10" floodColor="#967c43" floodOpacity="0.22" />
+                </filter>
+              </defs>
+              <g filter="url(#astrolabeFilter)">
+                <circle cx="50" cy="50" r="44" fill="url(#astrolabeHalo)" />
+                <ellipse cx="50" cy="50" rx="42" ry="17" transform="rotate(-30 50 50)" stroke="url(#ringGoldA)" strokeWidth="3" />
+                <ellipse cx="50" cy="50" rx="38" ry="14" transform="rotate(40 50 50)" stroke="url(#ringGoldB)" strokeWidth="2.6" strokeDasharray="50 5" />
+                <circle cx="50" cy="50" r="23" fill="url(#astrolabeCore)" />
+                <path d="M50 32 L52.4 47.6 L68 50 L52.4 52.4 L50 68 L47.6 52.4 L32 50 L47.6 47.6 Z" fill="#ffffff" fillOpacity="0.8" />
+                <circle cx="50" cy="50" r="3.5" fill="#ffffff" />
+                <circle cx="79" cy="33" r="5" fill="url(#astrolabeCore)" />
+                <circle cx="78" cy="32" r="1.6" fill="#ffffff" />
+              </g>
+            </svg>
+          </div>
           <p className="eyebrow">Ton espace d’apprentissage</p>
           <SplitHeading lines={['Un cap clair.', 'À chaque connexion.']} />
           <p>Tes missions, tes acquis et ta prochaine étape, au même endroit.</p>
