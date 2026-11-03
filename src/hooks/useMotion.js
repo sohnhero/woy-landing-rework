@@ -149,7 +149,17 @@ export function useMotion({
         meter.style.width = p * 100 + '%';
         const n = Math.min(3, Math.floor(p * 3) + 1);
         indexEl.innerHTML = `0${n} <i>/</i> 03`;
-        statement.querySelectorAll('span').forEach((s, i) => {
+
+        const steps = statement.querySelectorAll('.manifesto-step');
+        if (steps.length > 0) {
+          const activeIndex = Math.min(steps.length - 1, Math.floor(p * steps.length));
+          steps.forEach((step, i) => {
+            step.classList.toggle('active', i === activeIndex);
+            step.classList.toggle('lit', p >= (i / steps.length) * 0.85);
+          });
+        }
+
+        statement.querySelectorAll('span.statement-phrase').forEach((s, i) => {
           s.classList.toggle('lit', p > i * 0.28);
         });
       }
