@@ -58,23 +58,21 @@ export default function RouteSection() {
               </button>
 
               <div className="badge-route">
-                {visibleLevels.map((b, i) => (
-                  <Fragment key={b.level}>
-                    {i > 0 && <span className="connector" aria-hidden="true"></span>}
-                    <button
-                      type="button"
-                      className={b.level === level ? 'level-badge selected' : 'level-badge'}
-                      data-level={b.level}
-                      aria-label={`Explorer ${b.code} ${b.name}`}
-                      onClick={() => setLevel(b.level)}
-                    >
-                      <span className="hex">
-                        <Icon name={b.icon} />
-                      </span>
-                      <small>{b.code}</small>
-                      <strong>{b.name}</strong>
-                    </button>
-                  </Fragment>
+                {visibleLevels.map((b) => (
+                  <button
+                    key={b.level}
+                    type="button"
+                    className={b.level === level ? 'level-badge selected' : 'level-badge'}
+                    data-level={b.level}
+                    aria-label={`Explorer ${b.code} ${b.name}`}
+                    onClick={() => setLevel(b.level)}
+                  >
+                    <span className="hex">
+                      <Icon name={b.icon} />
+                    </span>
+                    <small>{b.code}</small>
+                    <strong>{b.name}</strong>
+                  </button>
                 ))}
               </div>
 
@@ -117,7 +115,7 @@ export default function RouteSection() {
             </div>
           </div>
 
-          <div className="level-detail" role="tabpanel" id="level-detail" aria-live="polite" aria-labelledby={`level-${level}`}>
+          <div className="level-detail" key={level} role="tabpanel" id="level-detail" aria-live="polite" aria-labelledby={`level-${level}`}>
             <div className="level-detail-header">
               <div className="level-detail-meta">
                 <p className="eyebrow" id="level-label">{current.label}</p>
