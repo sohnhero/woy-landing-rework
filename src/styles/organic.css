@@ -543,23 +543,18 @@ p{color:#554c3b}
 .closing p:not(.eyebrow){font-size:19px!important;color:#dfd6c3!important;margin:20px 0 32px!important}
 .closing-crypto{position:absolute;right:2%;top:5%;width:44%;max-width:520px;height:90%;object-fit:contain;filter:drop-shadow(0 30px 45px rgba(0,0,0,0.5)) drop-shadow(0 6px 22px rgba(224,180,75,0.35));animation:chipFloat 9s infinite ease-in-out}
 
-/* 3D Navigational Astrolabe Sphere (Symmetrical right companion to .section-orb) */
-.section-astrolabe {
-  position: absolute;
-  right: 4%;
-  top: 0;
-  width: 85px;
-  height: 85px;
-  display: block;
-  pointer-events: none;
-  animation: chipFloat 8s ease-in-out infinite;
+/* Symmetrical right counterpart planet orb */
+.section-orb.right {
+  left: auto !important;
+  right: 4% !important;
   animation-delay: -4s;
-  z-index: 2;
+  background: radial-gradient(circle at 70% 25%, #fffef4, #ecddba 45%, #a58b54) !important;
+  box-shadow: inset 5px -5px 15px #bda06550, 0 15px 25px #967c4318 !important;
 }
-.section-astrolabe svg {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
+.section-orb.right:after {
+  left: auto !important;
+  right: -12px !important;
+  transform: rotate(25deg) !important;
 }
 
 /* Footer & Accessibility */
@@ -668,7 +663,7 @@ p{color:#554c3b}
 .back-top:hover svg{transform:translateY(-2px)}
 
 @media(max-width:1100px){
-  .section-astrolabe{right:-10px!important;scale:.7!important}
+  .section-orb.right{right:-10px!important;scale:.7!important}
   .crypto-chip{padding:12px 18px!important}
   .chip-coin{width:38px!important;height:38px!important}
   .coin-btc b{font-size:20px!important}
@@ -681,7 +676,7 @@ p{color:#554c3b}
   .section-trophy{scale:0.85;left:0}
 }
 @media(max-width:800px){
-  .section-astrolabe{display:none!important}
+  .section-orb.right{display:none!important}
   .crypto-chip{padding:10px 16px!important}
   .chip-coin{width:34px!important;height:34px!important}
   .coin-btc b{font-size:18px!important}
