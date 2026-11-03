@@ -174,6 +174,155 @@ export const INFO = {
 export const NAV_LINKS = [
   { href: '#parcours', label: 'Le parcours' },
   { href: '#experience', label: 'L’expérience' },
+  { href: '#ecosysteme', label: 'L’écosystème' },
   { href: '#esprit', label: 'L’esprit WÔY' },
+];
+
+export const ECOSYSTEM_PILLARS = [
+  {
+    id: 'communaute',
+    number: '01',
+    tabLabel: 'La Communauté & les Djélis',
+    tabSubtitle: 'L’Arbre à Palabres Moderne',
+    badge: 'Cercle des Initiés',
+    eyebrow: 'ÉCHANGE · ENTRAIDE · TRANSMISSION',
+    title: 'La Force du Collectif : L’Arbre à Palabres Moderne',
+    tagline: 'Ne traversez plus jamais les marchés seul.',
+    quote: '« Ne traversez plus jamais les marchés seul. Rejoignez un cercle d’initiés où la sagesse financière ancestrale rencontre les réalités économiques modernes. »',
+    description: 'Dans la tradition ouest-africaine, le Djéli (griot) est le gardien de la mémoire, de la vérité et de la transmission. À l’Académie WÔY, la communauté est l’espace vivant où le savoir théorique se confronte à la réalité du terrain. Les apprentis partagent leurs missions concrètes, tandis que les aînés et mentors partagent leur expérience.',
+    access: 'Inclus & débloqué d’office pour tout nouvel apprenti',
+    pricing: 'Accès Garanti dans le Parcours',
+    icon: 'users',
+    ctaText: 'Rejoindre les Initiés',
+    highlights: [
+      {
+        title: 'Entraide & Rituels Quotidiens',
+        desc: 'Espaces d’échange dédiés pour débriefer les modules, poser des questions sans tabou sur l’argent et s’entraider.',
+      },
+      {
+        title: 'Partage des Missions de Terrain',
+        desc: 'Chaque niveau se termine par une mission réelle (S7) : audits de tontines, décryptages locaux et victoires partagées.',
+      },
+      {
+        title: 'Le Cercle des Djélis (Mentorat)',
+        desc: 'Accès direct aux analyses, conseils et retours d’expérience des membres certifiés des niveaux avancés.',
+      },
+      {
+        title: 'Canal Privé & Salons Vocaux',
+        desc: 'Masterclasses mensuelles, revues d’actualité en direct et canal exclusif avec les architectes de l’Académie.',
+      },
+    ],
+    preview: {
+      type: 'community',
+      headerTag: 'Cercle WÔY en direct',
+      onlineCount: '1 420 initiés en ligne',
+      feed: [
+        { author: 'Amadou S.', role: 'Djéli N5', time: 'Il y a 14m', text: 'Audit tontine locale terminé : +18% d’optimisation grâce à la grille de sanctuarisation N2 ! 🛡️', badge: 'Mission S7 Validée' },
+        { author: 'Fatou K.', role: 'Initié N1', time: 'Il y a 6m', text: 'Clé matérielle 2FA et cold wallet synchronisés sans accroc grâce au live d’hier soir. Merci le Cercle !', badge: 'Succès Sécurité' },
+        { author: 'Moussa D.', role: 'Mentor N6', time: 'À l’instant', text: 'Rappel pour tous : salon vocal ce soir à 20h UTC sur l’analyse des réserves de change. Venez avec vos questions.', badge: 'Annonce Djéli' },
+      ],
+      insight: '« Un seul arbre ne fait pas la forêt. La richesse se construit ensemble. »',
+    },
+  },
+  {
+    id: 'rapport',
+    number: '02',
+    tabLabel: 'Le Rapport Mensuel WÔY',
+    tabSubtitle: 'Boussole Macro & On-Chain',
+    badge: 'Accessible dès le Niveau N2',
+    eyebrow: 'INTELLIGENCE ÉCONOMIQUE & ON-CHAIN',
+    title: 'Le Rapport Mensuel : Votre Boussole dans la Tempête',
+    tagline: 'Comprendre l’impact réel avant d’agir.',
+    quote: '« La macroéconomie mondiale et les signaux on-chain traduits pour l’investisseur africain. Une boussole mensuelle claire pour anticiper plutôt que subir. »',
+    description: 'La plupart des rapports parlent de Wall Street dans un jargon obscur et ignorent les réalités africaines (inflation locale, devises CFA/Naira/Cedi, import-export, matières premières). Le Rapport Mensuel WÔY filtre le bruit médiatique pour livrer l’essentiel stratégique applicable dès aujourd’hui.',
+    access: 'Débloqué dès validation du Niveau N2 (Fondamentaux)',
+    pricing: '10 000 FCFA / mois',
+    icon: 'document',
+    ctaText: 'S’abonner au Rapport',
+    highlights: [
+      {
+        title: 'Synthèse Macro Globale & Africaine',
+        desc: 'BRVM, devises africaines, cours du cacao, de l’or, du pétrole et impact direct des taux FED/BCE sur nos économies.',
+      },
+      {
+        title: 'Fiches Protocoles & Grille d’Audit WÔY',
+        desc: 'Décorticage sans concession des projets crypto et protocoles DeFi selon nos standards stricts de sécurité.',
+      },
+      {
+        title: 'Cartographie Risques & Opportunités',
+        desc: 'Ce qu’il faut surveiller, ce qu’il faut éviter, et les secteurs sous-évalués du mois.',
+      },
+      {
+        title: 'Feuille de Route pour le Portefeuille',
+        desc: 'Recommandations méthodologiques d’allocation pour adapter son épargne en fonction du cycle économique.',
+      },
+    ],
+    preview: {
+      type: 'report',
+      edition: 'Édition Mensuelle N°11',
+      date: 'Novembre 2026',
+      status: 'Dossier Stratégique WÔY (34 pages)',
+      metrics: [
+        { label: 'Inflation & Devises', value: 'UEMOA / CEMAC', change: '+2.1% maîtrisée' },
+        { label: 'Protocoles Audités', value: '4 Projets Débunkés', change: '2 Éligibles WÔY' },
+        { label: 'Indice Macro WÔY', value: '78 / 100', change: 'Opportunité Saine' },
+      ],
+      topics: [
+        'Analyse BRVM & Devises : Les 3 secteurs à surveiller',
+        'Bitcoin & Liquidité Mondiale : Ce que signifie le cycle actuel',
+        'DeFi & Yields Locaux : Audits de protocoles de prêt décentralisés',
+      ],
+    },
+  },
+  {
+    id: 'laamb',
+    number: '03',
+    tabLabel: 'L’Arène LAAMB',
+    tabSubtitle: 'Banc d’Essai des Marchés',
+    badge: 'Signaux Encadrés & Simulation N3/N4',
+    eyebrow: 'SIMULATION · COMPÉTITION · ANALYSE TECHNIQUE',
+    title: 'L’Arène LAAMB : Le Banc d’Essai des Maîtres du Marché',
+    tagline: 'L’arène où la discipline forge les champions.',
+    quote: '« Entrez dans l’arène. Testez vos analyses, suivez les meilleurs initiés et confrontez vos stratégies de marché dans un cadre sécurisé et encadré. »',
+    description: 'Le LAAMB tire son nom de la lutte traditionnelle — sport d’honneur, de discipline et de stratégie où le combattant ne triomphe qu’après avoir maîtrisé les rituels et la technique. Ni casino, ni hasard : un terrain de compétition simulé où la rigueur et la psychologie face au risque sont souveraines.',
+    access: 'Mode Spectateur dès N3 · Mode Trader dès N4',
+    pricing: '20 000 FCFA / mois',
+    icon: 'zap',
+    ctaText: 'Entrer dans l’Arène',
+    highlights: [
+      {
+        title: 'Mode Spectateur (Dès Niveau N3 — Lire le Marché)',
+        desc: 'Flux de signaux techniques et graphiques rigoureusement audités par le Comité WÔY, et droit de vote pour le Champion.',
+      },
+      {
+        title: 'Mode Combattant / Trader (Dès Niveau N4 — Décision & Exécution)',
+        desc: 'Arène de simulation avancée sans engager votre capital réel : exécution des setups sous conditions réelles de volatilité.',
+      },
+      {
+        title: 'Notation de la Discipline & Psychologie',
+        desc: 'Vos ratios gain/perte, respect strict du stop-loss, gestion du levier et élimination des biais cognitifs notés par le système.',
+      },
+      {
+        title: 'Classement & Cauris d’Honneur',
+        desc: 'Gravissez le classement des arènes, gagnez le respect de la guilde et remportez des Cauris et récompenses exclusives.',
+      },
+    ],
+    preview: {
+      type: 'laamb',
+      season: 'Saison 04 en direct',
+      activeFights: '128 simulations actives',
+      spectator: {
+        title: 'Mode Spectateur (N3)',
+        signal: 'Setup BTC/USDT audité · Stop-Loss 2.1% · R:R 3.4',
+        status: 'Audit validé par le Comité',
+        vote: 'Champion du mois en cours : Ousmane T. (84% votes)',
+      },
+      fighter: {
+        title: 'Mode Combattant (N4)',
+        score: 'Discipline 96/100 · Zéro Liquidation',
+        reward: 'Bounty : 450 Cauris d’Honneur',
+      },
+    },
+  },
 ];
 

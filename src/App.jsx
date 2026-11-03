@@ -8,6 +8,7 @@ import Manifesto from './components/Manifesto.jsx';
 import RouteSection from './components/RouteSection.jsx';
 import Practice from './components/Practice.jsx';
 import ProductSection from './components/ProductSection.jsx';
+import EcosystemSection from './components/EcosystemSection.jsx';
 import SpiritSection from './components/SpiritSection.jsx';
 import FaqSection from './components/FaqSection.jsx';
 import ClosingSection from './components/ClosingSection.jsx';
@@ -71,6 +72,7 @@ export default function App() {
         <RouteSection />
         <Practice />
         <ProductSection appWindowRef={appWindowRef} />
+        <EcosystemSection onJoin={() => setJoinOpen(true)} />
         <SpiritSection />
         <FaqSection />
         <ClosingSection onJoin={() => setJoinOpen(true)} />
