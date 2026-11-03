@@ -141,27 +141,50 @@ export function useMotion({
       const statement = statementRef.current;
       const app = appWindowRef.current;
 
-      if (manifesto && stage && meter && indexEl && statement) {
+      if (manifesto && stage) {
         const r = manifesto.getBoundingClientRect();
         const distance = manifesto.offsetHeight - stage.offsetHeight;
         const p = clamp(-r.top / Math.max(distance, 1));
 
-        meter.style.width = p * 100 + '%';
-        const n = Math.min(3, Math.floor(p * 3) + 1);
-        indexEl.innerHTML = `0${n} <i>/</i> 03`;
-
-        const steps = statement.querySelectorAll('.manifesto-step');
-        if (steps.length > 0) {
-          const activeIndex = Math.min(steps.length - 1, Math.floor(p * steps.length));
-          steps.forEach((step, i) => {
-            step.classList.toggle('active', i === activeIndex);
-            step.classList.toggle('lit', p >= (i / steps.length) * 0.85);
-          });
+        if (meter) {
+          meter.style.width = `${(p * 100).toFixed(1)}%`;
         }
 
-        statement.querySelectorAll('span.statement-phrase').forEach((s, i) => {
-          s.classList.toggle('lit', p > i * 0.28);
-        });
+        const step = p < 0.35 ? 0 : p < 0.70 ? 1 : 2;
+
+        if (indexEl) {
+          indexEl.innerHTML = `ÉTAPE 0${step + 1} <i>/</i> 03`;
+        }
+
+        if (statement) {
+          const cards = statement.querySelectorAll('.manifesto-card');
+          if (cards.length) {
+            cards.forEach((card, i) => {
+              card.classList.toggle('active', i === step);
+              card.classList.toggle('past', i < step);
+            });
+          } else {
+            statement.querySelectorAll('span').forEach((s, i) => {
+              s.classList.toggle('lit', p > i * 0.28);
+            });
+          }
+        }
+
+        // Parallax depth & dynamic float on character duo artwork
+        const art = stage.querySelector('.manifesto-duo');
+        if (art) {
+          const y = (p - 0.5) * -55;
+          const rot = (p - 0.5) * 3.5;
+          const scale = 1 + p * 0.04;
+          art.style.transform = `translate3d(0, ${y.toFixed(1)}px, 0) rotate(${rot.toFixed(2)}deg) scale(${scale.toFixed(3)})`;
+        }
+
+        // Atmospheric golden aura expansion
+        const aura = stage.querySelector('.manifesto-aura');
+        if (aura) {
+          aura.style.opacity = (0.45 + p * 0.55).toFixed(2);
+          aura.style.transform = `scale(${(1 + p * 0.28).toFixed(2)})`;
+        }
       }
 
       if (app) {
