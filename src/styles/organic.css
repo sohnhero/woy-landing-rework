@@ -502,231 +502,111 @@ p{color:#554c3b}
 
 /* ==========================================================================
    Section: L'Écosystème WÔY (Communauté & Djélis, Rapport Mensuel, LAAMB)
+   Design épuré, moderne, statique et cartes orientées sur la largeur
    ========================================================================== */
 .ecosystem-section {
   position: relative;
-  padding-block: 120px 100px;
-  background: radial-gradient(ellipse at 50% 20%, rgba(240, 222, 185, 0.22) 0%, transparent 60%);
+  padding-block: 100px 90px;
+  background: radial-gradient(ellipse at 50% 25%, rgba(240, 222, 185, 0.2) 0%, transparent 65%);
+}
+
+.ecosystem-section .container {
+  width: min(1280px, calc(100% - 64px));
 }
 
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 28px;
   align-items: stretch;
-  margin-top: 50px;
+  margin-top: 44px;
 }
 
 .pillar-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  border-radius: 38px;
-  background: linear-gradient(155deg, rgba(255, 255, 255, 0.96) 0%, rgba(253, 248, 237, 0.92) 50%, rgba(245, 233, 212, 0.85) 100%);
+  border-radius: 32px;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.96) 0%, rgba(253, 248, 237, 0.93) 55%, rgba(246, 235, 215, 0.88) 100%);
   border: 1.5px solid rgba(224, 198, 148, 0.65);
-  box-shadow: inset 0 2px 3px #ffffff, 0 20px 48px rgba(140, 105, 38, 0.08);
-  padding: 30px 26px 28px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: inset 0 2px 3px #ffffff, 0 16px 40px rgba(140, 105, 38, 0.08);
+  padding: 24px 24px 22px;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
 }
 
 .pillar-card:hover {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-5px);
   border-color: #d8a842;
-  box-shadow: inset 0 2px 3px #ffffff, 0 32px 70px rgba(185, 135, 40, 0.18), 0 0 0 1px rgba(220, 175, 75, 0.3);
+  box-shadow: inset 0 2px 3px #ffffff, 0 24px 50px rgba(185, 135, 40, 0.16), 0 0 0 1px rgba(220, 175, 75, 0.25);
 }
 
-/* 3D Asset Stage */
+/* 3D Asset Stage - Static, compact & crisp */
 .pillar-stage {
   position: relative;
   width: 100%;
-  height: 220px;
+  height: 145px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
-}
-
-.pillar-asset-halo {
-  position: absolute;
-  width: 75%;
-  height: 75%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(235, 195, 115, 0.28) 0%, rgba(245, 225, 175, 0.08) 55%, transparent 75%);
-  filter: blur(14px);
-  z-index: 0;
-  pointer-events: none;
-  transition: transform 0.4s ease;
-}
-
-.pillar-card:hover .pillar-asset-halo {
-  transform: scale(1.18);
-  background: radial-gradient(circle, rgba(240, 195, 95, 0.4) 0%, rgba(250, 220, 155, 0.12) 60%, transparent 80%);
+  margin-bottom: 14px;
 }
 
 .pillar-3d-img {
   position: relative;
   z-index: 1;
-  max-width: 92%;
-  max-height: 210px;
+  max-width: 90%;
+  max-height: 135px;
   object-fit: contain;
-  filter: drop-shadow(0 18px 24px rgba(120, 85, 25, 0.18));
-  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), filter 0.45s ease;
-  animation: pillarFloat 7s ease-in-out infinite;
+  filter: drop-shadow(0 14px 20px rgba(120, 85, 25, 0.16));
+  display: block;
+  margin: 0 auto;
 }
 
-.pillar-card:nth-child(2) .pillar-3d-img {
-  animation-delay: -2.3s;
-}
-
-.pillar-card:nth-child(3) .pillar-3d-img {
-  animation-delay: -4.6s;
-}
-
-.pillar-card:hover .pillar-3d-img {
-  transform: scale(1.06) translateY(-4px);
-  filter: drop-shadow(0 26px 32px rgba(140, 95, 25, 0.25));
-}
-
-@keyframes pillarFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-/* Card Content & Typography */
-.pillar-content {
+/* Card Content & Typography - Ultra épuré & moderne */
+.pillar-body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 14px;
-}
-
-.pillar-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   gap: 10px;
 }
 
-.pillar-eyebrow {
-  font: 800 10px/1.2 monospace;
-  letter-spacing: 1.5px;
+.pillar-tag {
+  align-self: flex-start;
+  font: 700 9.5px/1 monospace;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #9c7b38;
-}
-
-.pillar-badge {
-  font: 700 10.5px/1 Manrope, sans-serif;
-  letter-spacing: 0.5px;
-  padding: 5px 12px;
+  color: #8c6721;
+  background: rgba(225, 185, 90, 0.16);
+  border: 1px solid rgba(215, 175, 80, 0.4);
+  padding: 5px 11px;
   border-radius: 20px;
-  background: rgba(225, 185, 90, 0.18);
-  border: 1px solid rgba(215, 175, 80, 0.45);
-  color: #7a5516;
-  white-space: nowrap;
-}
-
-.pillar-titles {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
 }
 
 .pillar-title {
-  font-size: 22px !important;
-  line-height: 1.22 !important;
+  font-size: 20px !important;
+  line-height: 1.25 !important;
   color: #241d13 !important;
   margin: 0 !important;
   font-weight: 800 !important;
-}
-
-.pillar-subtitle {
-  font: 600 13px/1.4 DM Sans, sans-serif;
-  color: #8c734b;
+  letter-spacing: -0.02em !important;
 }
 
 .pillar-desc {
-  font: 400 14px/1.55 DM Sans, Arial, sans-serif;
-  color: #554834;
-  margin: 0;
-  min-height: 44px;
-}
-
-.pillar-points {
-  list-style: none;
-  padding: 0;
-  margin: 4px 0 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  border-top: 1px solid rgba(220, 198, 150, 0.4);
-  padding-top: 14px;
-}
-
-.pillar-points li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-size: 13px !important;
-  line-height: 1.4 !important;
-  color: #433725 !important;
-}
-
-.pillar-check {
-  display: grid;
-  place-items: center;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: rgba(185, 140, 45, 0.18);
-  border: 1px solid #c99834;
-  color: #8f6517;
-  font-size: 10.5px;
-  font-weight: bold;
-  flex-shrink: 0;
-  margin-top: 1px;
-}
-
-/* Card Footer & CTA */
-.pillar-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-top: auto;
-  padding-top: 16px;
-  border-top: 1px solid rgba(220, 198, 150, 0.4);
-}
-
-.pillar-price-box {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-
-.pillar-price-label {
-  font: 700 9.5px monospace;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  color: #9c8359;
-}
-
-.pillar-price-value {
-  font: 800 13.5px Manrope, sans-serif;
-  color: #271f12;
-  white-space: nowrap;
+  font: 400 13.5px/1.5 DM Sans, Arial, sans-serif !important;
+  color: #584a36 !important;
+  margin: 0 !important;
 }
 
 .pillar-cta {
-  min-height: 42px !important;
-  padding: 0 16px !important;
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 6px;
+  min-height: 38px !important;
+  padding: 0 18px !important;
   font-size: 11px !important;
   gap: 10px !important;
-  border-radius: 25px !important;
+  border-radius: 20px !important;
 }
 
 /* Section 04: L’esprit WÔY — 3D Value Pills */
@@ -1791,23 +1671,24 @@ p{color:#554c3b}
 
   /* Ecosystem Section on Tablet */
   .ecosystem-section {
-    padding-block: 90px 70px !important;
+    padding-block: 80px 65px !important;
   }
   .pillars-grid {
-    gap: 20px !important;
+    gap: 18px !important;
   }
   .pillar-card {
-    padding: 24px 18px 22px !important;
-    border-radius: 30px !important;
+    padding: 20px 18px 18px !important;
+    border-radius: 26px !important;
   }
   .pillar-stage {
-    height: 180px !important;
+    height: 125px !important;
+    margin-bottom: 12px !important;
   }
   .pillar-3d-img {
-    max-height: 170px !important;
+    max-height: 115px !important;
   }
   .pillar-title {
-    font-size: 19px !important;
+    font-size: 18px !important;
   }
 
   /* Spirit & Closing */
@@ -2242,33 +2123,30 @@ p{color:#554c3b}
   }
   .pillars-grid {
     grid-template-columns: 1fr !important;
-    gap: 24px !important;
+    gap: 20px !important;
     max-width: 440px !important;
     margin-inline: auto !important;
   }
   .pillar-card {
-    padding: 24px 20px !important;
-    border-radius: 28px !important;
+    padding: 22px 20px 20px !important;
+    border-radius: 26px !important;
   }
   .pillar-stage {
-    height: 200px !important;
+    height: 140px !important;
+    margin-bottom: 12px !important;
   }
   .pillar-3d-img {
-    max-height: 190px !important;
+    max-height: 130px !important;
   }
   .pillar-title {
-    font-size: 21px !important;
+    font-size: 20px !important;
   }
   .pillar-desc {
     min-height: auto !important;
   }
-  .pillar-footer {
-    flex-wrap: wrap !important;
-    gap: 14px !important;
-  }
   .pillar-cta {
     width: 100% !important;
-    min-height: 46px !important;
+    min-height: 44px !important;
     justify-content: center !important;
   }
 
@@ -2589,33 +2467,25 @@ p{color:#554c3b}
     padding-block: 55px 40px !important;
   }
   .pillar-card {
-    padding: 20px 16px !important;
-    border-radius: 24px !important;
+    padding: 18px 16px 16px !important;
+    border-radius: 22px !important;
   }
   .pillar-stage {
-    height: 175px !important;
+    height: 125px !important;
+    margin-bottom: 10px !important;
   }
   .pillar-3d-img {
-    max-height: 165px !important;
+    max-height: 115px !important;
   }
   .pillar-title {
-    font-size: 19px !important;
-  }
-  .pillar-subtitle {
-    font-size: 12px !important;
+    font-size: 18px !important;
   }
   .pillar-desc {
-    font-size: 13px !important;
+    font-size: 12.5px !important;
   }
-  .pillar-points li {
-    font-size: 12px !important;
-  }
-  .pillar-eyebrow {
-    font-size: 9px !important;
-  }
-  .pillar-badge {
-    font-size: 9.5px !important;
-    padding: 4px 10px !important;
+  .pillar-tag {
+    font-size: 8.5px !important;
+    padding: 4px 9px !important;
   }
 
   /* Footer on Small Mobile */
