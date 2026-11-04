@@ -13,7 +13,7 @@ html.dark {
   color-scheme: dark;
   --bg: #110f0b;
   --ink: #f7f4ec;
-  --muted: #9c8e79;
+  --muted: #a89c85;
   --gold: #f5c453;
   --gold-dark: #cca038;
   --line: #2a2318;
@@ -115,25 +115,49 @@ html.dark .skip {
 }
 
 /* ==========================================================================
-   Navbar
+   Navbar (Fixed & Scrolled State)
    ========================================================================== */
 html.dark .navbar {
-  background: rgba(20, 17, 13, 0.88) !important;
-  border-color: rgba(218, 185, 115, 0.22) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 220, 140, 0.1) !important;
+  background: linear-gradient(135deg, rgba(26, 21, 15, 0.94), rgba(18, 14, 10, 0.92)) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border: 1.5px solid rgba(218, 185, 115, 0.28) !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.65), 0 2px 6px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 220, 140, 0.12) !important;
+}
+
+html.dark .nav-wrap.scrolled .navbar {
+  height: 64px !important;
+  background: linear-gradient(135deg, rgba(22, 17, 12, 0.98), rgba(15, 12, 8, 0.96)) !important;
+  border-color: rgba(218, 185, 115, 0.38) !important;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.8), 0 4px 12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 220, 140, 0.15) !important;
 }
 
 html.dark .brand img {
   filter: brightness(1.1) drop-shadow(0 2px 8px rgba(245, 196, 83, 0.25)) !important;
 }
 
-html.dark .nav-links a {
-  color: #d6ccba !important;
+/* Nav Links Pill Capsule */
+html.dark .nav-links {
+  background: rgba(30, 24, 17, 0.85) !important;
+  border: 1px solid rgba(215, 180, 100, 0.25) !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4) !important;
 }
 
-html.dark .nav-links a:hover,
+html.dark .nav-links a {
+  color: #c9bea9 !important;
+}
+
+html.dark .nav-links a:hover {
+  color: #ffd978 !important;
+  background: rgba(245, 196, 83, 0.14) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35) !important;
+}
+
 html.dark .nav-links a.active {
-  color: #f5c453 !important;
+  color: #1a150c !important;
+  background: linear-gradient(135deg, #ffd978 0%, #e5af3a 100%) !important;
+  box-shadow: 0 4px 14px rgba(220, 165, 50, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.6) !important;
+  font-weight: 800 !important;
 }
 
 html.dark .nav-motion-toggle {
@@ -159,19 +183,19 @@ html.dark .btn-dark:hover {
 }
 
 html.dark .menu-toggle span {
-  background: #e5d8be !important;
+  background: #f5c453 !important;
 }
 
 @media (max-width: 768px) {
   html.dark .nav-links.open {
     background: rgba(20, 17, 12, 0.98) !important;
-    border-color: rgba(215, 180, 100, 0.25) !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7) !important;
+    border-color: rgba(215, 180, 100, 0.3) !important;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.85) !important;
   }
 }
 
 /* ==========================================================================
-   Hero Section
+   Hero Section & Video Button
    ========================================================================== */
 html.dark .hero {
   background: radial-gradient(ellipse at 80% 30%, rgba(180, 130, 40, 0.16) 0%, transparent 60%) !important;
@@ -186,6 +210,27 @@ html.dark .hero h1 span {
 
 html.dark .hero-description {
   color: #aea28c !important;
+}
+
+/* "Voir la vidéo" Hero Button */
+html.dark .btn-hero-video {
+  background: linear-gradient(135deg, rgba(34, 28, 20, 0.92), rgba(22, 18, 13, 0.96)) !important;
+  border: 1.5px solid rgba(218, 180, 95, 0.38) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 230, 160, 0.1) !important;
+  color: #f7f3ea !important;
+}
+
+html.dark .btn-hero-video:hover {
+  background: linear-gradient(135deg, rgba(46, 38, 27, 0.95), rgba(30, 24, 17, 0.98)) !important;
+  border-color: #f5c453 !important;
+  color: #ffd978 !important;
+  box-shadow: 0 12px 30px rgba(245, 196, 83, 0.25), 0 0 0 2px rgba(245, 196, 83, 0.2) !important;
+}
+
+html.dark .btn-video-orb {
+  background: linear-gradient(135deg, #ffd978, #d49f33) !important;
+  color: #241d11 !important;
+  box-shadow: 0 4px 14px rgba(212, 160, 50, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.7) !important;
 }
 
 html.dark .art-caption {
@@ -251,65 +296,116 @@ html.dark .principles-ribbon i {
 /* ==========================================================================
    Route Section (Le Parcours)
    ========================================================================== */
+html.dark .route-section {
+  background: radial-gradient(ellipse at 8% 60%, rgba(180, 130, 40, 0.12) 0%, transparent 45%) !important;
+}
+
 html.dark .route-panel {
-  background: linear-gradient(155deg, rgba(28, 23, 17, 0.95) 0%, rgba(18, 15, 11, 0.98) 100%) !important;
-  border: 1.5px solid rgba(218, 182, 105, 0.28) !important;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55), inset 0 1px 1px rgba(255, 230, 160, 0.08) !important;
+  background: linear-gradient(155deg, rgba(28, 23, 17, 0.96) 0%, rgba(18, 15, 11, 0.98) 100%) !important;
+  border: 1.5px solid rgba(218, 182, 105, 0.3) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 230, 160, 0.08) !important;
 }
 
 html.dark .route-visual {
   background: radial-gradient(circle at center, rgba(160, 115, 30, 0.14) 0%, transparent 70%) !important;
 }
 
-html.dark .carousel-arrow-btn {
-  background: #252017 !important;
-  border-color: rgba(215, 180, 100, 0.35) !important;
-  color: #f5c453 !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+/* Non-Selected Hex Badges (Obsidian Glass with Golden Rim) */
+html.dark .hex {
+  background: linear-gradient(145deg, #282117 0%, #1c1710 100%) !important;
+  border: 1.5px solid rgba(218, 180, 95, 0.3) !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 230, 160, 0.1) !important;
+  color: #e5dcce !important;
 }
 
-html.dark .carousel-arrow-btn:hover {
-  background: #31281b !important;
+html.dark .hex svg {
+  stroke: #f5c453 !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+html.dark .level-badge:hover .hex {
   border-color: #f5c453 !important;
-  box-shadow: 0 6px 18px rgba(245, 196, 83, 0.35) !important;
+  background: linear-gradient(145deg, #332a1e 0%, #241d14 100%) !important;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.6), 0 0 15px rgba(245, 196, 83, 0.25) !important;
 }
 
-html.dark .level-badge {
-  background: linear-gradient(145deg, #252017 0%, #1b1711 100%) !important;
-  border-color: rgba(215, 180, 100, 0.25) !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+/* Active Selected Badge — Ultra 3D Radiant Gold */
+html.dark .level-badge.selected .hex {
+  background: radial-gradient(circle at 35% 25%, #fffaf0 0%, #fae298 30%, #dba22e 75%, #a67316 100%) !important;
+  border: 2px solid rgba(255, 250, 225, 0.95) !important;
+  box-shadow: 0 22px 46px rgba(210, 155, 40, 0.5), 0 4px 14px rgba(0, 0, 0, 0.6), inset 0 3px 3px #ffffff, inset 0 -3px 4px rgba(120, 75, 10, 0.55) !important;
 }
 
-html.dark .level-badge.is-selected {
-  background: radial-gradient(circle at 35% 30%, #ffd978 0%, #eaaf38 55%, #ab7519 100%) !important;
-  box-shadow: 0 10px 28px rgba(235, 175, 50, 0.45) !important;
+html.dark .level-badge.selected .hex svg {
+  stroke: #342104 !important;
+  filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.85)) drop-shadow(0 -0.5px 1px rgba(70, 40, 5, 0.5)) !important;
 }
 
-html.dark .badge-sublabel {
-  color: #f5f1e6 !important;
+html.dark .level-badge small {
+  color: #cca038 !important;
 }
 
-html.dark .level-mini-pill {
-  background: #231e16 !important;
-  border-color: rgba(215, 180, 100, 0.22) !important;
+html.dark .level-badge strong {
+  color: #fcf9f2 !important;
+}
+
+/* Carousel Arrow Navigation Buttons */
+html.dark .badge-nav-arrow {
+  background: linear-gradient(135deg, #282117 0%, #1b1710 100%) !important;
+  border: 1.8px solid rgba(218, 178, 105, 0.35) !important;
+  color: #f5c453 !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 230, 160, 0.1) !important;
+}
+
+html.dark .badge-nav-arrow:hover:not(:disabled) {
+  background: #332a1e !important;
+  border-color: #f5c453 !important;
+  color: #ffd978 !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 14px rgba(245, 196, 83, 0.3) !important;
+}
+
+html.dark .badge-nav-arrow:disabled {
+  opacity: 0.25 !important;
+  border-color: rgba(215, 190, 140, 0.2) !important;
+  box-shadow: none !important;
+}
+
+/* Level Track Pills */
+html.dark .level-track:before {
+  background: rgba(215, 180, 100, 0.25) !important;
+}
+
+html.dark .level-track button {
+  background: #252017 !important;
+  border: 1px solid rgba(215, 180, 100, 0.25) !important;
   color: #a89b84 !important;
 }
 
-html.dark .level-mini-pill:hover {
-  border-color: #f5c453 !important;
-  color: #f5c453 !important;
+html.dark .level-track button:hover:not([aria-selected="true"]) {
+  background: #332b1f !important;
+  color: #f7f3ea !important;
+  border-color: rgba(245, 196, 83, 0.4) !important;
 }
 
-html.dark .level-mini-pill.is-selected {
-  background: #f5c453 !important;
-  color: #1c170e !important;
+html.dark .level-track button[aria-selected="true"] {
+  background: linear-gradient(135deg, #ffd978 0%, #e5af3a 100%) !important;
+  color: #1a150c !important;
   border-color: #ffd978 !important;
+  box-shadow: 0 4px 16px rgba(220, 165, 50, 0.5) !important;
 }
 
+html.dark .connector {
+  background: rgba(215, 180, 100, 0.3) !important;
+}
+
+/* Level Detail Dark Card */
 html.dark .level-detail {
-  background: rgba(22, 18, 13, 0.75) !important;
+  background: radial-gradient(ellipse at 90% 0, #2c251a, #16130d) !important;
+  border: 1px solid rgba(215, 180, 100, 0.25) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 230, 160, 0.08) !important;
 }
 
+html.dark .level-detail h3,
 html.dark .level-detail #level-title {
   color: #fcf9f2 !important;
 }
@@ -319,7 +415,7 @@ html.dark .level-desc {
 }
 
 html.dark .level-concepts-heading {
-  color: #c9bea9 !important;
+  color: #cca038 !important;
 }
 
 html.dark .level-detail li {
@@ -346,50 +442,139 @@ html.dark .reward-info small {
 }
 
 /* ==========================================================================
-   Practice Section
+   Practice Section (L’expérience WÔY & Quiz)
    ========================================================================== */
 html.dark .practice {
-  background: radial-gradient(ellipse at 50% 50%, rgba(140, 100, 25, 0.12) 0%, transparent 65%) !important;
+  background: #15120d !important;
+  border: 1.5px solid rgba(218, 180, 95, 0.25) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
+  color: #f7f4ec !important;
+}
+
+/* Heading with High Contrast Gold Accent */
+html.dark .practice-copy h2 {
+  color: #fcf9f2 !important;
+}
+
+html.dark .practice-copy h2 span {
+  color: #f5c453 !important;
+}
+
+html.dark .practice-copy>p:not(.eyebrow) {
+  color: #aea28c !important;
+}
+
+html.dark .practice .steps li {
+  color: #d6ccba !important;
+}
+
+html.dark .practice .steps b {
+  color: #f5c453 !important;
+}
+
+html.dark .steps span:before {
+  color: #f5c453 !important;
+}
+
+/* Quiz Stack Underlying Pseudo-card */
+html.dark .quiz-stack:before {
+  background: #231d15 !important;
+  border: 1px solid rgba(215, 180, 100, 0.25) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
 }
 
 html.dark .quiz-card {
-  background: linear-gradient(155deg, rgba(30, 25, 18, 0.96) 0%, rgba(20, 17, 12, 0.98) 100%) !important;
-  border-color: rgba(218, 180, 95, 0.3) !important;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
+  background: linear-gradient(155deg, rgba(32, 26, 19, 0.98) 0%, rgba(20, 17, 12, 0.99) 100%) !important;
+  border: 1.5px solid rgba(218, 180, 95, 0.3) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 230, 160, 0.08) !important;
 }
 
+html.dark #quiz-title,
 html.dark .quiz-card h3 {
   color: #fcf9f2 !important;
 }
 
-html.dark .quiz-answers button {
-  background: rgba(36, 30, 22, 0.75) !important;
-  border-color: rgba(215, 180, 100, 0.22) !important;
-  color: #e5dcce !important;
+html.dark #quiz-question,
+html.dark .quiz-card p {
+  color: #beb29d !important;
 }
 
-html.dark .quiz-answers button:hover {
-  background: rgba(45, 37, 26, 0.95) !important;
-  border-color: #d4a544 !important;
+html.dark .quiz-answers button {
+  background: rgba(38, 31, 23, 0.85) !important;
+  border: 1px solid rgba(215, 180, 100, 0.25) !important;
+  color: #f7f3ea !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+html.dark .quiz-answers button:hover:not(:disabled) {
+  background: rgba(48, 39, 28, 0.95) !important;
+  border-color: #f5c453 !important;
+  color: #ffd978 !important;
+}
+
+html.dark .quiz-answers button.correct {
+  background: rgba(80, 120, 50, 0.35) !important;
+  border-color: #88c057 !important;
+  color: #d8f5b5 !important;
+}
+
+html.dark .quiz-answers button.incorrect {
+  background: rgba(140, 50, 40, 0.35) !important;
+  border-color: #d4685a !important;
+  color: #fcd5d0 !important;
+}
+
+html.dark #restart-quiz {
+  background: linear-gradient(110deg, #f5bd4c, #edb03a) !important;
+  color: #282014 !important;
+  font-weight: 700 !important;
+}
+
+html.dark #quiz-hint,
+html.dark .demo-label {
+  color: #8e806b !important;
+}
+
+html.dark #quiz-feedback {
   color: #f5c453 !important;
 }
 
-html.dark .steps span {
-  border-color: rgba(215, 180, 100, 0.25) !important;
-  color: #b5a894 !important;
-}
-
 /* ==========================================================================
-   Product Section (Espace d'Apprentissage)
+   Product Section (Ton espace d’apprentissage & App Window)
    ========================================================================== */
 html.dark .product-section {
   background: radial-gradient(ellipse at 50% 70%, rgba(160, 115, 35, 0.15) 0%, transparent 65%) !important;
 }
 
+html.dark .product-section .center-heading h2 {
+  color: #fcf9f2 !important;
+}
+
+html.dark .product-section .center-heading p {
+  color: #beb29d !important;
+}
+
+/* Symmetrical 3D Orbs in Dark Mode */
+html.dark .section-orb {
+  background: radial-gradient(circle at 30% 25%, #4a3a1f, #261f14 55%, #15110b) !important;
+  box-shadow: inset -4px -4px 14px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.6) !important;
+  border: 1px solid rgba(215, 180, 100, 0.3) !important;
+}
+
+html.dark .section-orb:after {
+  border-color: rgba(215, 180, 100, 0.3) !important;
+  border-top-color: #ffd978 !important;
+}
+
+html.dark .section-orb.right {
+  background: radial-gradient(circle at 70% 25%, #4a3a1f, #261f14 55%, #15110b) !important;
+  box-shadow: inset 4px -4px 14px rgba(0, 0, 0, 0.7), 0 15px 30px rgba(0, 0, 0, 0.6) !important;
+}
+
 html.dark .app-window {
-  background: #191510 !important;
-  border-color: rgba(218, 182, 100, 0.3) !important;
-  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.65) !important;
+  background: linear-gradient(140deg, #1d1812, #14110d) !important;
+  border: 1.5px solid rgba(218, 182, 100, 0.3) !important;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.7) !important;
 }
 
 html.dark .window-bar {
@@ -398,28 +583,48 @@ html.dark .window-bar {
   color: #8e806b !important;
 }
 
-html.dark .app-sidebar {
-  background: #14110d !important;
-  border-color: #262017 !important;
+html.dark .app-body {
+  background: #16120e !important;
 }
 
-html.dark .app-nav a {
+html.dark .app-sidebar {
+  background: #14100c !important;
+  border-color: rgba(215, 180, 100, 0.2) !important;
+}
+
+html.dark .app-nav {
   color: #a89b85 !important;
 }
 
-html.dark .app-nav a.active,
-html.dark .app-nav a:hover {
+html.dark .app-nav.active,
+html.dark .app-nav:hover {
   background: rgba(245, 196, 83, 0.15) !important;
   color: #f5c453 !important;
 }
 
 html.dark .app-main {
-  background: #1b1712 !important;
+  background: #19140f !important;
 }
 
+html.dark .app-greeting h3 {
+  color: #fcf9f2 !important;
+}
+
+html.dark .app-greeting p {
+  color: #a89c85 !important;
+}
+
+html.dark .xp-pill {
+  background: rgba(245, 196, 83, 0.15) !important;
+  border: 1px solid rgba(215, 180, 100, 0.3) !important;
+  color: #f5c453 !important;
+}
+
+/* App Lessons Card */
 html.dark .lesson-card {
   background: linear-gradient(145deg, #251f17 0%, #1d1812 100%) !important;
-  border-color: rgba(215, 180, 100, 0.25) !important;
+  border: 1px solid rgba(215, 180, 100, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
 }
 
 html.dark .lesson-card h4 {
@@ -430,37 +635,70 @@ html.dark .lesson-card p {
   color: #b8ac98 !important;
 }
 
+html.dark .lesson-card .hex {
+  background: linear-gradient(145deg, #2e261b 0%, #201a12 100%) !important;
+  border-color: rgba(215, 180, 100, 0.3) !important;
+  color: #f5c453 !important;
+}
+
 html.dark .progress-card {
-  background: #221c15 !important;
-  border-color: rgba(215, 180, 100, 0.22) !important;
+  background: #201a13 !important;
+  border: 1px solid rgba(215, 180, 100, 0.22) !important;
+  color: #f7f3ea !important;
+}
+
+/* Missions List Rows (Pure Blinding White Fix) */
+html.dark .missions-list .mission-row,
+html.dark .mission-row {
+  background: rgba(32, 26, 19, 0.92) !important;
+  border: 1px solid rgba(215, 180, 100, 0.25) !important;
+  color: #f7f3ea !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+}
+
+html.dark a.mission-row:hover {
+  background: rgba(42, 34, 24, 0.95) !important;
+  border-color: #f5c453 !important;
+  color: #ffd978 !important;
+}
+
+html.dark .mission-row small {
+  color: #f5c453 !important;
+}
+
+html.dark .mission-row .check-dot {
+  background: rgba(245, 196, 83, 0.2) !important;
+  border-color: #d4a544 !important;
+  color: #f5c453 !important;
 }
 
 html.dark .mentor {
-  background: #231d16 !important;
-  border-color: rgba(215, 180, 100, 0.22) !important;
+  background: #221c15 !important;
+  border: 1px solid rgba(215, 180, 100, 0.22) !important;
   color: #c4b8a2 !important;
 }
 
-html.dark .passport-card {
+html.dark .passport-card,
+html.dark .passport-strip>div {
   background: linear-gradient(145deg, #221c15 0%, #18140f 100%) !important;
-  border-color: rgba(215, 180, 100, 0.25) !important;
+  border: 1px solid rgba(215, 180, 100, 0.25) !important;
   box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4) !important;
 }
 
-html.dark .passport-text h4 {
+html.dark .passport-text h4,
+html.dark .passport-strip p {
   color: #f7f3ea !important;
-  text-shadow: none !important;
-}
-
-html.dark .passport-text p {
-  color: #a89b85 !important;
 }
 
 /* ==========================================================================
-   Ecosystem Section
+   Ecosystem Section (Communauté, Rapport, LAAMB)
    ========================================================================== */
 html.dark .ecosystem-section {
   background: radial-gradient(ellipse at 50% 25%, rgba(140, 100, 25, 0.14) 0%, transparent 65%) !important;
+}
+
+html.dark .ecosystem-section .heading-note {
+  color: #aea28c !important;
 }
 
 html.dark .ecosystem-ambient-glow {
@@ -492,8 +730,13 @@ html.dark .pillar-tag {
   color: #f5c453 !important;
 }
 
+html.dark .pillar-body .pillar-cta {
+  background: linear-gradient(110deg, #f5bd4c, #edb03a) !important;
+  color: #282014 !important;
+}
+
 /* ==========================================================================
-   Spirit Section
+   Spirit Section (L’esprit WÔY)
    ========================================================================== */
 html.dark .spirit-copy h2 {
   color: #fcf9f2 !important;
