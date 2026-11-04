@@ -16,8 +16,10 @@ import Footer from './components/Footer.jsx';
 import Dialogs from './components/Dialogs.jsx';
 import VideoModal from './components/VideoModal.jsx';
 import { useMotion } from './hooks/useMotion.js';
+import { useTheme } from './hooks/useTheme.js';
 
 export default function App() {
+  const { theme, toggleTheme } = useTheme();
   const [joinOpen, setJoinOpen] = useState(false);
   const [infoType, setInfoType] = useState(null);
   const [videoOpen, setVideoOpen] = useState(false);
@@ -53,6 +55,8 @@ export default function App() {
         onJoin={() => setJoinOpen(true)}
         motionPaused={motionPaused}
         onToggleMotion={() => setMotionPaused((p) => !p)}
+        theme={theme}
+        onToggleTheme={toggleTheme}
       />
       <main id="main">
         <Hero

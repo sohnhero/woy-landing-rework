@@ -1,0 +1,681 @@
+/* ==========================================================================
+   WÔY Academy — Luxury Dark Mode (Obsidian & Radiant Gold)
+   Crafted with utmost precision, atmospheric glow & flawless contrast
+   ========================================================================== */
+
+/* Theme Transition */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+}
+
+html.dark {
+  color-scheme: dark;
+  --bg: #110f0b;
+  --ink: #f7f4ec;
+  --muted: #9c8e79;
+  --gold: #f5c453;
+  --gold-dark: #cca038;
+  --line: #2a2318;
+  --olive: #92a259;
+  --dark: #070605;
+}
+
+/* Navbar Switcher Button Styling */
+.nav-theme-toggle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #d9cbac;
+  background: rgba(255, 252, 246, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #5d4c32;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(100, 75, 25, 0.04);
+  padding: 0;
+}
+
+.nav-theme-toggle:hover {
+  background: #ffffff;
+  border-color: #d4a544;
+  color: #9e6e18;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(212, 165, 68, 0.2);
+}
+
+.nav-theme-toggle.is-dark {
+  background: linear-gradient(135deg, #2b2216 0%, #1c170f 100%) !important;
+  border-color: #d4a544 !important;
+  color: #f5c453 !important;
+  box-shadow: 0 4px 14px rgba(212, 165, 68, 0.32), inset 0 1px 1px rgba(255, 230, 160, 0.2) !important;
+}
+
+.nav-theme-toggle.is-dark:hover {
+  background: #362b1b !important;
+  border-color: #f5c453 !important;
+  box-shadow: 0 6px 18px rgba(245, 196, 83, 0.45) !important;
+  transform: translateY(-2px) scale(1.05);
+}
+
+.theme-icon-wrap {
+  display: grid;
+  place-items: center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-theme-toggle:hover .theme-icon-wrap {
+  transform: rotate(20deg) scale(1.1);
+}
+
+/* ==========================================================================
+   Global Dark Overrides (html.dark)
+   ========================================================================== */
+html.dark body {
+  background-color: var(--bg) !important;
+  color: var(--ink) !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Base Headings & Text */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4 {
+  color: #fbf8f0 !important;
+}
+
+html.dark p {
+  color: var(--muted) !important;
+}
+
+html.dark .eyebrow {
+  color: #c9bea9 !important;
+}
+
+html.dark .eyebrow>span {
+  color: #f5c453 !important;
+}
+
+html.dark .text-link {
+  color: #f5c453 !important;
+  border-bottom-color: #7a633a !important;
+}
+
+/* Skip link */
+html.dark .skip {
+  background: #1c170e !important;
+  color: #f5c453 !important;
+  border: 1px solid #d4a544 !important;
+}
+
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+html.dark .navbar {
+  background: rgba(20, 17, 13, 0.88) !important;
+  border-color: rgba(218, 185, 115, 0.22) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 220, 140, 0.1) !important;
+}
+
+html.dark .brand img {
+  filter: brightness(1.1) drop-shadow(0 2px 8px rgba(245, 196, 83, 0.25)) !important;
+}
+
+html.dark .nav-links a {
+  color: #d6ccba !important;
+}
+
+html.dark .nav-links a:hover,
+html.dark .nav-links a.active {
+  color: #f5c453 !important;
+}
+
+html.dark .nav-motion-toggle {
+  background: rgba(28, 23, 16, 0.85) !important;
+  border-color: rgba(215, 180, 100, 0.35) !important;
+  color: #e5d8be !important;
+}
+
+html.dark .nav-motion-toggle:hover {
+  background: #2d2419 !important;
+  border-color: #d4a544 !important;
+  color: #f5c453 !important;
+}
+
+html.dark .btn-dark {
+  background: linear-gradient(110deg, #f5bd4c, #edb03a) !important;
+  color: #282014 !important;
+  box-shadow: inset 0 1px 0 #ffdf95, 0 4px 14px rgba(213, 165, 75, 0.28) !important;
+}
+
+html.dark .btn-dark:hover {
+  box-shadow: inset 0 1px 0 #ffdf95, 0 8px 24px rgba(213, 165, 75, 0.45) !important;
+}
+
+html.dark .menu-toggle span {
+  background: #e5d8be !important;
+}
+
+@media (max-width: 768px) {
+  html.dark .nav-links.open {
+    background: rgba(20, 17, 12, 0.98) !important;
+    border-color: rgba(215, 180, 100, 0.25) !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7) !important;
+  }
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+html.dark .hero {
+  background: radial-gradient(ellipse at 80% 30%, rgba(180, 130, 40, 0.16) 0%, transparent 60%) !important;
+}
+
+html.dark .hero h1 span {
+  background: linear-gradient(110deg, #ffd978, #f5c453 50%, #cca038) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+}
+
+html.dark .hero-description {
+  color: #aea28c !important;
+}
+
+html.dark .art-caption {
+  color: #9c8e76 !important;
+}
+
+html.dark .crypto-chip {
+  background: linear-gradient(135deg, rgba(32, 27, 20, 0.92) 0%, rgba(22, 18, 13, 0.95) 100%) !important;
+  border-color: rgba(218, 180, 95, 0.35) !important;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 230, 160, 0.1) !important;
+  color: #f7f3ea !important;
+}
+
+html.dark .crypto-chip strong {
+  color: #f7f3ea !important;
+}
+
+html.dark .crypto-chip small {
+  color: #a4947c !important;
+}
+
+html.dark .chip-coin {
+  border-color: #cca038 !important;
+  background: rgba(245, 196, 83, 0.12) !important;
+}
+
+html.dark .mouse {
+  border-color: #5c4f3a !important;
+}
+
+html.dark .mouse i {
+  background: #f5c453 !important;
+}
+
+html.dark .scroll-cue {
+  color: #8c7e68 !important;
+}
+
+/* ==========================================================================
+   Principles Ribbon
+   ========================================================================== */
+html.dark .principles-ribbon {
+  background: rgba(22, 18, 14, 0.92) !important;
+  border-block-color: rgba(215, 180, 100, 0.2) !important;
+}
+
+html.dark .principles-ribbon:before {
+  background: linear-gradient(90deg, #110f0b, transparent) !important;
+}
+
+html.dark .principles-ribbon:after {
+  background: linear-gradient(-90deg, #110f0b, transparent) !important;
+}
+
+html.dark .principles-ribbon>div {
+  color: #c9bea9 !important;
+}
+
+html.dark .principles-ribbon i {
+  color: #f5c453 !important;
+}
+
+/* ==========================================================================
+   Route Section (Le Parcours)
+   ========================================================================== */
+html.dark .route-panel {
+  background: linear-gradient(155deg, rgba(28, 23, 17, 0.95) 0%, rgba(18, 15, 11, 0.98) 100%) !important;
+  border: 1.5px solid rgba(218, 182, 105, 0.28) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.55), inset 0 1px 1px rgba(255, 230, 160, 0.08) !important;
+}
+
+html.dark .route-visual {
+  background: radial-gradient(circle at center, rgba(160, 115, 30, 0.14) 0%, transparent 70%) !important;
+}
+
+html.dark .carousel-arrow-btn {
+  background: #252017 !important;
+  border-color: rgba(215, 180, 100, 0.35) !important;
+  color: #f5c453 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark .carousel-arrow-btn:hover {
+  background: #31281b !important;
+  border-color: #f5c453 !important;
+  box-shadow: 0 6px 18px rgba(245, 196, 83, 0.35) !important;
+}
+
+html.dark .level-badge {
+  background: linear-gradient(145deg, #252017 0%, #1b1711 100%) !important;
+  border-color: rgba(215, 180, 100, 0.25) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark .level-badge.is-selected {
+  background: radial-gradient(circle at 35% 30%, #ffd978 0%, #eaaf38 55%, #ab7519 100%) !important;
+  box-shadow: 0 10px 28px rgba(235, 175, 50, 0.45) !important;
+}
+
+html.dark .badge-sublabel {
+  color: #f5f1e6 !important;
+}
+
+html.dark .level-mini-pill {
+  background: #231e16 !important;
+  border-color: rgba(215, 180, 100, 0.22) !important;
+  color: #a89b84 !important;
+}
+
+html.dark .level-mini-pill:hover {
+  border-color: #f5c453 !important;
+  color: #f5c453 !important;
+}
+
+html.dark .level-mini-pill.is-selected {
+  background: #f5c453 !important;
+  color: #1c170e !important;
+  border-color: #ffd978 !important;
+}
+
+html.dark .level-detail {
+  background: rgba(22, 18, 13, 0.75) !important;
+}
+
+html.dark .level-detail #level-title {
+  color: #fcf9f2 !important;
+}
+
+html.dark .level-desc {
+  color: #beb29d !important;
+}
+
+html.dark .level-concepts-heading {
+  color: #c9bea9 !important;
+}
+
+html.dark .level-detail li {
+  color: #e5dcce !important;
+}
+
+html.dark .level-detail li .check-dot {
+  background: rgba(245, 196, 83, 0.2) !important;
+  border-color: #d4a544 !important;
+  color: #f5c453 !important;
+}
+
+html.dark .level-reward-strip {
+  background: rgba(28, 23, 16, 0.8) !important;
+  border-color: rgba(215, 180, 100, 0.25) !important;
+}
+
+html.dark .reward-info strong {
+  color: #f7f3ea !important;
+}
+
+html.dark .reward-info small {
+  color: #a4947c !important;
+}
+
+/* ==========================================================================
+   Practice Section
+   ========================================================================== */
+html.dark .practice {
+  background: radial-gradient(ellipse at 50% 50%, rgba(140, 100, 25, 0.12) 0%, transparent 65%) !important;
+}
+
+html.dark .quiz-card {
+  background: linear-gradient(155deg, rgba(30, 25, 18, 0.96) 0%, rgba(20, 17, 12, 0.98) 100%) !important;
+  border-color: rgba(218, 180, 95, 0.3) !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6) !important;
+}
+
+html.dark .quiz-card h3 {
+  color: #fcf9f2 !important;
+}
+
+html.dark .quiz-answers button {
+  background: rgba(36, 30, 22, 0.75) !important;
+  border-color: rgba(215, 180, 100, 0.22) !important;
+  color: #e5dcce !important;
+}
+
+html.dark .quiz-answers button:hover {
+  background: rgba(45, 37, 26, 0.95) !important;
+  border-color: #d4a544 !important;
+  color: #f5c453 !important;
+}
+
+html.dark .steps span {
+  border-color: rgba(215, 180, 100, 0.25) !important;
+  color: #b5a894 !important;
+}
+
+/* ==========================================================================
+   Product Section (Espace d'Apprentissage)
+   ========================================================================== */
+html.dark .product-section {
+  background: radial-gradient(ellipse at 50% 70%, rgba(160, 115, 35, 0.15) 0%, transparent 65%) !important;
+}
+
+html.dark .app-window {
+  background: #191510 !important;
+  border-color: rgba(218, 182, 100, 0.3) !important;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.65) !important;
+}
+
+html.dark .window-bar {
+  background: #14110d !important;
+  border-color: #262017 !important;
+  color: #8e806b !important;
+}
+
+html.dark .app-sidebar {
+  background: #14110d !important;
+  border-color: #262017 !important;
+}
+
+html.dark .app-nav a {
+  color: #a89b85 !important;
+}
+
+html.dark .app-nav a.active,
+html.dark .app-nav a:hover {
+  background: rgba(245, 196, 83, 0.15) !important;
+  color: #f5c453 !important;
+}
+
+html.dark .app-main {
+  background: #1b1712 !important;
+}
+
+html.dark .lesson-card {
+  background: linear-gradient(145deg, #251f17 0%, #1d1812 100%) !important;
+  border-color: rgba(215, 180, 100, 0.25) !important;
+}
+
+html.dark .lesson-card h4 {
+  color: #fcf9f2 !important;
+}
+
+html.dark .lesson-card p {
+  color: #b8ac98 !important;
+}
+
+html.dark .progress-card {
+  background: #221c15 !important;
+  border-color: rgba(215, 180, 100, 0.22) !important;
+}
+
+html.dark .mentor {
+  background: #231d16 !important;
+  border-color: rgba(215, 180, 100, 0.22) !important;
+  color: #c4b8a2 !important;
+}
+
+html.dark .passport-card {
+  background: linear-gradient(145deg, #221c15 0%, #18140f 100%) !important;
+  border-color: rgba(215, 180, 100, 0.25) !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark .passport-text h4 {
+  color: #f7f3ea !important;
+  text-shadow: none !important;
+}
+
+html.dark .passport-text p {
+  color: #a89b85 !important;
+}
+
+/* ==========================================================================
+   Ecosystem Section
+   ========================================================================== */
+html.dark .ecosystem-section {
+  background: radial-gradient(ellipse at 50% 25%, rgba(140, 100, 25, 0.14) 0%, transparent 65%) !important;
+}
+
+html.dark .ecosystem-ambient-glow {
+  background: radial-gradient(ellipse at var(--eco-beam-x, 50%) 30%, rgba(215, 165, 55, 0.18) 0%, rgba(160, 115, 30, 0.06) 45%, transparent 70%) !important;
+}
+
+html.dark .pillar-card {
+  background: linear-gradient(155deg, rgba(30, 25, 18, 0.96) 0%, rgba(22, 18, 13, 0.94) 55%, rgba(16, 13, 9, 0.92) 100%) !important;
+  border-color: rgba(218, 180, 95, 0.3) !important;
+  box-shadow: inset 0 1px 1px rgba(255, 230, 160, 0.1), 0 20px 48px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark .pillar-card:hover {
+  border-color: #f5c453 !important;
+  box-shadow: inset 0 1px 1px rgba(255, 230, 160, 0.18), 0 28px 60px rgba(0, 0, 0, 0.7), 0 0 24px rgba(245, 196, 83, 0.2) !important;
+}
+
+html.dark .pillar-title {
+  color: #fcf9f2 !important;
+}
+
+html.dark .pillar-desc {
+  color: #b8ac98 !important;
+}
+
+html.dark .pillar-tag {
+  background: rgba(245, 196, 83, 0.16) !important;
+  border-color: rgba(215, 175, 80, 0.4) !important;
+  color: #f5c453 !important;
+}
+
+/* ==========================================================================
+   Spirit Section
+   ========================================================================== */
+html.dark .spirit-copy h2 {
+  color: #fcf9f2 !important;
+}
+
+html.dark .spirit-copy p:not(.eyebrow) {
+  color: #b8ac98 !important;
+}
+
+html.dark .value-pill,
+html.dark .values>span {
+  background: linear-gradient(145deg, #241e16 0%, #1a1610 100%) !important;
+  border-color: rgba(215, 180, 100, 0.3) !important;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45) !important;
+}
+
+html.dark .value-label {
+  color: #f7f3ea !important;
+  text-shadow: none !important;
+}
+
+html.dark .value-icon-3d {
+  background: radial-gradient(circle at 35% 30%, #ffd978 0%, #eaaf38 55%, #ab7519 100%) !important;
+  border-color: #ffd978 !important;
+  box-shadow: 0 4px 12px rgba(235, 175, 50, 0.35) !important;
+}
+
+html.dark .value-icon-3d svg {
+  stroke: #2b200e !important;
+  color: #2b200e !important;
+  filter: none !important;
+}
+
+/* ==========================================================================
+   FAQ Section
+   ========================================================================== */
+html.dark .faq-intro h2 {
+  color: #fcf9f2 !important;
+}
+
+html.dark .faq-intro p {
+  color: #b8ac98 !important;
+}
+
+html.dark .faq-list details {
+  background: rgba(28, 23, 17, 0.8) !important;
+  border-color: rgba(215, 180, 100, 0.22) !important;
+}
+
+html.dark .faq-list details[open] {
+  background: rgba(36, 29, 21, 0.95) !important;
+  border-color: #d4a544 !important;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark .faq-list summary {
+  color: #fcf9f2 !important;
+}
+
+html.dark .faq-list summary .faq-toggle-icon {
+  background: #2d2419 !important;
+  border: 1px solid rgba(215, 180, 100, 0.35) !important;
+}
+
+html.dark .faq-list summary .faq-toggle-icon:before,
+html.dark .faq-list summary .faq-toggle-icon:after {
+  background: #f5c453 !important;
+}
+
+html.dark .faq-list details>p {
+  color: #beb29d !important;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+html.dark .footer-wrap-minimal {
+  background: radial-gradient(ellipse at 88% 20%, rgba(140, 100, 25, 0.15) 0%, transparent 65%) !important;
+}
+
+html.dark .footer-minimal-slogan {
+  color: #a89c85 !important;
+}
+
+html.dark .footer-divider-v {
+  background: rgba(215, 180, 100, 0.25) !important;
+}
+
+html.dark .footer-nav-link {
+  color: #e5dcce !important;
+}
+
+html.dark .footer-nav-link:hover,
+html.dark .footer-nav-link.is-active {
+  color: #f5c453 !important;
+}
+
+html.dark .footer-nav-chevron {
+  color: #cca038 !important;
+}
+
+html.dark .footer-resources-dropdown {
+  background: linear-gradient(145deg, #221c15 0%, #18140f 100%) !important;
+  border-color: rgba(215, 180, 100, 0.35) !important;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.6) !important;
+}
+
+html.dark .footer-resources-dropdown a,
+html.dark .footer-resources-dropdown button {
+  color: #e5dcce !important;
+}
+
+html.dark .footer-resources-dropdown a:hover,
+html.dark .footer-resources-dropdown button:hover {
+  background: rgba(245, 196, 83, 0.15) !important;
+  color: #f5c453 !important;
+}
+
+html.dark .minimal-social-btn {
+  background: linear-gradient(145deg, #252017 0%, #1a1610 100%) !important;
+  border-color: rgba(215, 180, 100, 0.3) !important;
+  color: #f5c453 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+html.dark .minimal-social-btn:hover {
+  background: #2e261a !important;
+  border-color: #f5c453 !important;
+  box-shadow: 0 6px 18px rgba(245, 196, 83, 0.25) !important;
+}
+
+html.dark .footer-minimal-bottom {
+  border-color: rgba(215, 180, 100, 0.2) !important;
+  color: #8e806b !important;
+}
+
+html.dark .footer-minimal-copy {
+  color: #8e806b !important;
+}
+
+html.dark .footer-minimal-geo {
+  color: #a89c85 !important;
+}
+
+html.dark .footer-minimal-geo svg {
+  color: #f5c453 !important;
+  stroke: #f5c453 !important;
+}
+
+/* ==========================================================================
+   Modals, Dialogs & Floating Buttons
+   ========================================================================== */
+html.dark .scroll-to-top {
+  background: rgba(28, 23, 16, 0.9) !important;
+  border-color: rgba(215, 180, 100, 0.4) !important;
+  color: #f5c453 !important;
+}
+
+html.dark .scroll-to-top:hover {
+  background: #342a1b !important;
+  border-color: #f5c453 !important;
+}
+
+html.dark dialog {
+  background: #1b1712 !important;
+  border-color: rgba(215, 180, 100, 0.35) !important;
+  color: #f7f3ea !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.8) !important;
+}
+
+html.dark dialog input {
+  background: #252017 !important;
+  border-color: rgba(215, 180, 100, 0.3) !important;
+  color: #f7f3ea !important;
+}
+
+html.dark .dialog-close {
+  background: #252017 !important;
+  border-color: rgba(215, 180, 100, 0.3) !important;
+  color: #f5c453 !important;
+}
+
+html.dark .video-modal-container {
+  border-color: rgba(215, 180, 100, 0.35) !important;
+}

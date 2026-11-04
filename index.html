@@ -7,11 +7,24 @@
     <meta name="description" content="Comprends la crypto, relève des défis et développe les bons réflexes avec WÔY Academy.">
     <title>WÔY Academy — Comprendre. Pour décider.</title>
     <link rel="icon" href="/assets/woy-logo.png">
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('woy-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = saved ? saved : (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+            document.documentElement.setAttribute('data-theme', 'dark');
+            var meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute('content', '#12110e');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
-</html>
-
 </html>
