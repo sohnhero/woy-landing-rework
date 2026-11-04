@@ -5,7 +5,7 @@ export function useTheme() {
     try {
       const saved = localStorage.getItem('woy-theme');
       if (saved === 'dark' || saved === 'light') return saved;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      return 'light'; // Light mode actif par défaut à l'ouverture du site
     } catch {
       return 'light';
     }
@@ -27,19 +27,6 @@ export function useTheme() {
       meta.setAttribute('content', isDark ? '#12110e' : '#f8f6ef');
     }
   }, [theme]);
-
-  // Listen to OS color scheme changes if user hasn't explicitly set a custom theme in this session
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-color-scheme: dark)');
-    const onChange = (e) => {
-      const saved = localStorage.getItem('woy-theme');
-      if (!saved) {
-        setTheme(e.matches ? 'dark' : 'light');
-      }
-    };
-    mq.addEventListener('change', onChange);
-    return () => mq.removeEventListener('change', onChange);
-  }, []);
 
   const toggleTheme = () => {
     const next = theme === 'dark' ? 'light' : 'dark';
