@@ -825,14 +825,14 @@ html.dark .ecosystem-ambient-glow {
 }
 
 html.dark .pillar-card {
-  background: linear-gradient(155deg, rgba(30, 25, 18, 0.96) 0%, rgba(22, 18, 13, 0.94) 55%, rgba(16, 13, 9, 0.92) 100%) !important;
+  background: linear-gradient(155deg, rgba(30, 24, 18, 0.98) 0%, rgba(20, 16, 12, 0.98) 60%, rgba(14, 11, 8, 0.98) 100%) !important;
   border-color: rgba(218, 180, 95, 0.3) !important;
-  box-shadow: inset 0 1px 1px rgba(255, 230, 160, 0.1), 0 20px 48px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: inset 0 1px 1px rgba(255, 230, 160, 0.08), 0 20px 48px rgba(0, 0, 0, 0.6) !important;
 }
 
 html.dark .pillar-card:hover {
   border-color: #f5c453 !important;
-  box-shadow: inset 0 1px 1px rgba(255, 230, 160, 0.18), 0 28px 60px rgba(0, 0, 0, 0.7), 0 0 24px rgba(245, 196, 83, 0.2) !important;
+  box-shadow: inset 0 1px 1px rgba(255, 230, 160, 0.18), 0 26px 56px rgba(0, 0, 0, 0.7), 0 0 22px rgba(245, 196, 83, 0.22) !important;
 }
 
 html.dark .pillar-title {
@@ -844,14 +844,28 @@ html.dark .pillar-desc {
 }
 
 html.dark .pillar-tag {
-  background: rgba(245, 196, 83, 0.16) !important;
-  border-color: rgba(215, 175, 80, 0.4) !important;
+  background: rgba(245, 196, 83, 0.14) !important;
+  border-color: rgba(215, 175, 80, 0.35) !important;
   color: #f5c453 !important;
 }
 
 html.dark .pillar-body .pillar-cta {
   background: linear-gradient(110deg, #f5bd4c, #edb03a) !important;
-  color: #282014 !important;
+  color: #261c10 !important;
+  box-shadow: 0 4px 18px rgba(245, 189, 76, 0.28) !important;
+}
+
+html.dark .pillar-body .pillar-cta:hover {
+  background: linear-gradient(110deg, #ffd066, #f5bd4c) !important;
+  box-shadow: 0 6px 22px rgba(245, 189, 76, 0.4) !important;
+}
+
+html.dark .pillar-stage-glow {
+  background: radial-gradient(circle, rgba(245, 196, 83, 0.25) 0%, rgba(245, 196, 83, 0) 70%) !important;
+}
+
+html.dark .pillar-3d-img {
+  filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 20px rgba(245, 196, 83, 0.2)) !important;
 }
 
 /* ==========================================================================

@@ -1,12 +1,13 @@
 import { useEffect, useRef } from 'react';
-import Icon from './Icon.jsx';
 import SplitHeading from './SplitHeading.jsx';
 
 export const ECOSYSTEM_PILLARS = [
   {
     id: 'community',
     tag: 'Communauté & Mentorat',
-    title: 'La Communauté & les Djélis',
+    tagIcon: 'users',
+    plainTitle: 'La Communauté & les Djélis',
+    titleLines: ['LA COMMUNAUTÉ', '& LES DJÉLIS'],
     description: 'Ne traversez plus jamais les marchés seul. Un cercle d’initiés où l’entraide et l’expérience du terrain forgent votre réussite.',
     image: '/assets/pillars-community.png',
     ctaText: 'Rejoindre les Initiés',
@@ -14,7 +15,9 @@ export const ECOSYSTEM_PILLARS = [
   {
     id: 'report',
     tag: 'Intelligence Macro & Crypto',
-    title: 'Le Rapport Mensuel',
+    tagIcon: 'macro',
+    plainTitle: 'Le Rapport Mensuel',
+    titleLines: ['LE RAPPORT', 'MENSUEL'],
     description: 'La macroéconomie mondiale et les signaux on-chain traduits pour l’Afrique. Une boussole claire pour anticiper plutôt que subir.',
     image: '/assets/pillars-report.png',
     ctaText: 'Découvrir le Rapport',
@@ -22,7 +25,9 @@ export const ECOSYSTEM_PILLARS = [
   {
     id: 'laamb',
     tag: 'Arène & Simulation',
-    title: 'L’Arène LAAMB',
+    tagIcon: 'arena',
+    plainTitle: 'L’Arène LAAMB',
+    titleLines: ['L’ARÈNE', 'LAAMB'],
     description: 'Testez vos analyses, suivez les meilleurs setups et confrontez vos stratégies dans un simulateur encadré sans risquer votre capital.',
     image: '/assets/pillars-laamb.png',
     ctaText: 'Entrer dans l’Arène',
@@ -120,29 +125,58 @@ export default function EcosystemSection({ onJoin }) {
                 className={`pillar-card pillar-card-${idx} reveal`}
                 style={{ '--card-stagger': `${idx * 0.16}s` }}
               >
-                <div className="pillar-stage">
-                  <img
-                    src={pillar.image}
-                    alt={pillar.title}
-                    className="pillar-3d-img"
-                    loading="lazy"
-                  />
-                </div>
-
                 <div className="pillar-body">
-                  <span className="pillar-tag">{pillar.tag}</span>
-                  <h3 className="pillar-title">{pillar.title}</h3>
+                  <span className="pillar-tag">
+                    {pillar.tagIcon === 'users' && (
+                      <svg viewBox="0 0 16 16" fill="currentColor" className="pillar-tag-svg" aria-hidden="true">
+                        <path d="M6 7a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM1.5 13.5c0-2.2 1.8-3.5 4.5-3.5s4.5 1.3 4.5 3.5v.5h-9v-.5ZM11 6.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM10.5 10c.8 0 1.6.2 2.2.6 1.1.7 1.8 1.8 1.8 2.9v.5H11.5v-.5c0-1.1-.4-2.1-1-2.9.3-.4.7-.6 1.2-.6Z" />
+                      </svg>
+                    )}
+                    {pillar.tagIcon === 'macro' && (
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" className="pillar-tag-svg" aria-hidden="true">
+                        <path d="M4 2v12M2 5h4M8 1v14M6 4h4M12 3v10M10 7h4" />
+                      </svg>
+                    )}
+                    {pillar.tagIcon === 'arena' && (
+                      <svg viewBox="0 0 16 16" fill="currentColor" className="pillar-tag-svg" aria-hidden="true">
+                        <rect x="2" y="9" width="3" height="6" rx="0.8" />
+                        <rect x="6.5" y="5.5" width="3" height="9.5" rx="0.8" />
+                        <rect x="11" y="2" width="3" height="13" rx="0.8" />
+                      </svg>
+                    )}
+                    <span>{pillar.tag}</span>
+                  </span>
+
+                  <h3 className="pillar-title">
+                    {pillar.titleLines.map((line, lIdx) => (
+                      <span key={lIdx} className="pillar-title-line">
+                        {line}
+                        {lIdx < pillar.titleLines.length - 1 && <br />}
+                      </span>
+                    ))}
+                  </h3>
+
                   <p className="pillar-desc">{pillar.description}</p>
 
                   <button
                     type="button"
-                    className="btn btn-gold btn-small pillar-cta"
+                    className="pillar-cta"
                     onClick={onJoin}
-                    aria-label={`${pillar.ctaText} - ${pillar.title}`}
+                    aria-label={`${pillar.ctaText} - ${pillar.plainTitle}`}
                   >
                     <span>{pillar.ctaText}</span>
-                    <Icon name="north" />
+                    <span className="pillar-cta-arrow" aria-hidden="true">→</span>
                   </button>
+                </div>
+
+                <div className="pillar-stage">
+                  <div className="pillar-stage-glow" aria-hidden="true" />
+                  <img
+                    src={pillar.image}
+                    alt={pillar.plainTitle}
+                    className="pillar-3d-img"
+                    loading="lazy"
+                  />
                 </div>
               </article>
             </div>
