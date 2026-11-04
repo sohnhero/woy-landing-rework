@@ -40,7 +40,7 @@ export default function Footer({ onInfo }) {
               <span className="footer-nav-chevron" aria-hidden="true">›</span>
             </a>
 
-            <a href="#communaute" className="footer-nav-link">
+            <a href="#ecosysteme" className="footer-nav-link">
               <span>ÉCOSYSTÈME</span>
               <span className="footer-nav-chevron" aria-hidden="true">›</span>
             </a>

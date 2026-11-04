@@ -80,7 +80,7 @@ export function useMotion({
           }),
         { rootMargin: '-20% 0px -55% 0px' }
       );
-      document.querySelectorAll('#parcours,#experience,#esprit').forEach((e) => navIO.observe(e));
+      document.querySelectorAll('#parcours,#experience,#ecosysteme,#esprit').forEach((e) => navIO.observe(e));
     } else {
       document.querySelectorAll('.reveal').forEach((e) => e.classList.add('visible'));
     }

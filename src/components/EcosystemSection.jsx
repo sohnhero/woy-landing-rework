@@ -90,7 +90,8 @@ export default function EcosystemSection({ onJoin }) {
   }, []);
 
   return (
-    <section className="section ecosystem-section" id="communaute" ref={sectionRef}>
+    <section className="section ecosystem-section" id="ecosysteme" ref={sectionRef}>
+      <span id="communaute" style={{ position: 'absolute', top: '-100px', visibility: 'hidden' }} aria-hidden="true" />
       {/* Dynamic Golden Horizon Glow */}
       <div className="ecosystem-ambient-glow" aria-hidden="true" />
 
