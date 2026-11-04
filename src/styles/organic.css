@@ -1691,8 +1691,320 @@ p{color:#554c3b}
 }
 
 /* ==========================================================================
-   PERFECT RESPONSIVE ENGINE — TABLET & MOBILE (DESKTOP STRICTLY UNTOUCHED)
+   PERFECT RESPONSIVE ENGINE — COMPACT PC, TABLET & MOBILE
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   0. COMPACT PC & LAPTOP BREAKPOINT (max-width: 1366px)
+   Laptops (13" / 14" / 15", 1280x800, 1366x768, 1440x900, scaled 1080p)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1366px) {
+  .container {
+    width: min(100% - 64px, 1140px) !important;
+  }
+
+  /* Navbar */
+  .navbar {
+    width: min(100% - 48px, 1140px) !important;
+    padding: 0 20px !important;
+    height: 68px !important;
+  }
+  .nav-wrap.scrolled .navbar {
+    height: 60px !important;
+  }
+  .nav-links {
+    gap: 3px !important;
+    padding: 3px 5px !important;
+  }
+  .nav-links a {
+    font-size: 12px !important;
+    padding: 8px 14px !important;
+  }
+  .nav-actions {
+    gap: 12px !important;
+  }
+  .nav-actions .btn-dark,
+  .navbar .btn-small {
+    min-height: 42px !important;
+    padding: 0 16px !important;
+    font-size: 11px !important;
+    gap: 8px !important;
+  }
+  .nav-theme-toggle,
+  .nav-motion-toggle {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  /* Hero Section */
+  .hero {
+    min-height: 720px !important;
+    padding-top: 105px !important;
+    padding-bottom: 60px !important;
+    gap: 24px !important;
+  }
+  .hero h1 {
+    font-size: clamp(38px, 3.8vw, 54px) !important;
+  }
+  .hero-description {
+    font-size: 15.5px !important;
+    max-width: 440px !important;
+    margin-top: 20px !important;
+  }
+  .hero-buttons {
+    margin-top: 28px !important;
+    gap: 18px !important;
+  }
+  .hero-art {
+    max-width: 520px !important;
+    margin-right: 0 !important;
+  }
+  .hero-art > img {
+    max-width: 100% !important;
+  }
+  .chip-btc {
+    top: 35px !important;
+    left: -15px !important;
+    transform: rotate(-3deg) !important;
+  }
+  .chip-eth {
+    bottom: 45px !important;
+    right: -10px !important;
+    transform: rotate(3deg) !important;
+  }
+  .crypto-chip {
+    padding: 11px 16px !important;
+    gap: 10px !important;
+  }
+  .crypto-chip strong {
+    font-size: 12px !important;
+  }
+  .crypto-chip small {
+    font-size: 9px !important;
+  }
+
+  /* Manifesto */
+  .manifesto-layout {
+    grid-template-columns: 1fr 1.15fr !important;
+    gap: 36px !important;
+  }
+  .manifesto h2 {
+    font-size: clamp(44px, 4.8vw, 68px) !important;
+  }
+  .manifesto-art,
+  .manifesto-duo {
+    max-width: 440px !important;
+  }
+  .manifesto-cards {
+    gap: 10px !important;
+  }
+  .manifesto-card {
+    padding: 13px 18px !important;
+    gap: 14px !important;
+  }
+  .card-step-body strong {
+    font-size: 15px !important;
+  }
+  .card-step-body small {
+    font-size: 12px !important;
+  }
+  .card-step-num {
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 14px !important;
+  }
+
+  /* Route Section */
+  .route-section {
+    padding: 100px 0 !important;
+  }
+  .route-panel {
+    gap: 18px !important;
+    padding: 16px !important;
+    border-radius: 34px !important;
+  }
+  .badge-route-wrapper {
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+  }
+  .badge-route {
+    gap: 14px !important;
+    min-height: 145px !important;
+  }
+  .hex {
+    width: 82px !important;
+    height: 82px !important;
+    border-radius: 24px !important;
+  }
+  .hex svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  .badge-nav-arrow {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .level-badge small {
+    font-size: 11px !important;
+  }
+  .level-badge strong {
+    font-size: 12.5px !important;
+  }
+  .level-track {
+    margin-top: 24px !important;
+    gap: 6px !important;
+  }
+  .level-track button {
+    padding: 6px 14px !important;
+    font-size: 12px !important;
+  }
+  .level-detail {
+    padding: 30px 24px !important;
+    border-radius: 26px !important;
+  }
+  .level-detail h3 {
+    font-size: 26px !important;
+  }
+
+  /* Practice Section */
+  .practice {
+    padding: 70px 0 !important;
+    border-radius: 46px !important;
+  }
+  .practice-grid {
+    gap: 45px !important;
+  }
+  .practice-copy h2 {
+    font-size: clamp(32px, 3.2vw, 44px) !important;
+  }
+  .quiz-crypto {
+    width: 175px !important;
+    right: -15px !important;
+    top: -125px !important;
+  }
+  .quiz-card {
+    padding: 28px !important;
+    border-radius: 26px !important;
+  }
+  .quiz-card h3 {
+    font-size: 24px !important;
+  }
+
+  /* Product Section */
+  .product-section {
+    padding: 95px 0 !important;
+  }
+  .section-orb {
+    width: 72px !important;
+    height: 72px !important;
+    left: 2% !important;
+  }
+  .section-orb.right {
+    width: 72px !important;
+    height: 72px !important;
+    right: 2% !important;
+  }
+  .section-orb:after {
+    width: 90px !important;
+    height: 20px !important;
+  }
+  .app-window {
+    padding: 10px !important;
+    border-radius: 30px !important;
+  }
+  .app-body {
+    grid-template-columns: 180px 1fr !important;
+  }
+  .passport-strip {
+    gap: 20px !important;
+    margin-top: 40px !important;
+  }
+  .passport-strip > div {
+    padding: 20px !important;
+  }
+
+  /* Ecosystem Section */
+  .ecosystem-section {
+    padding: 95px 0 !important;
+  }
+  .pillars-grid {
+    gap: 20px !important;
+  }
+  .pillar-card {
+    padding: 24px 20px !important;
+    border-radius: 28px !important;
+  }
+  .pillar-stage {
+    height: 190px !important;
+  }
+  .pillar-3d-img {
+    max-height: 170px !important;
+  }
+  .pillar-title {
+    font-size: 20px !important;
+  }
+  .pillar-desc {
+    font-size: 13.5px !important;
+  }
+
+  /* Spirit Section */
+  .spirit-section {
+    padding: 85px 0 !important;
+  }
+  .spirit-grid {
+    gap: 45px !important;
+  }
+  .spirit-copy h2 {
+    font-size: clamp(32px, 3.2vw, 42px) !important;
+  }
+  .tree-art img {
+    max-width: 440px !important;
+    height: auto !important;
+  }
+
+  /* FAQ Section */
+  .faq-section {
+    padding: 85px 0 !important;
+  }
+  .faq-grid {
+    gap: 45px !important;
+  }
+
+  /* Closing Section */
+  .closing {
+    padding: 65px 50px !important;
+    min-height: 420px !important;
+    border-radius: 44px !important;
+  }
+  .closing h2 {
+    font-size: clamp(34px, 3.6vw, 48px) !important;
+  }
+  .closing-copy {
+    max-width: 60% !important;
+  }
+  .closing-crypto {
+    width: 38% !important;
+  }
+
+  /* Footer Minimal */
+  .footer-wrap-minimal {
+    margin-top: 60px !important;
+    padding: 50px 0 30px !important;
+  }
+  .footer-minimal-main {
+    gap: 24px !important;
+  }
+  .footer-minimal-nav {
+    gap: 28px !important;
+  }
+  .footer-nav-link {
+    font-size: 11.5px !important;
+    letter-spacing: 1.5px !important;
+  }
+  .footer-minimal-brand {
+    min-width: 180px !important;
+  }
+}
 
 /* --------------------------------------------------------------------------
    1. TABLET BREAKPOINT (max-width: 1024px)

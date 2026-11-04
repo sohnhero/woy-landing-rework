@@ -203,6 +203,13 @@ html.dark .menu-toggle span {
   background: #f5c453 !important;
 }
 
+@media (max-width: 1366px) {
+  html.dark .hero-art:before {
+    width: 480px !important;
+    height: 480px !important;
+  }
+}
+
 @media (max-width: 768px) {
   html.dark .nav-links.open {
     background: rgba(20, 17, 12, 0.98) !important;
