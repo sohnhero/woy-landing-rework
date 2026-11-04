@@ -133,15 +133,15 @@ export default function EcosystemSection({ onJoin }) {
                       </svg>
                     )}
                     {pillar.tagIcon === 'macro' && (
-                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" className="pillar-tag-svg" aria-hidden="true">
-                        <path d="M4 2v12M2 5h4M8 1v14M6 4h4M12 3v10M10 7h4" />
+                      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" className="pillar-tag-svg" aria-hidden="true">
+                        <path d="M3.5 1.5v13M1.5 5.5h4M1.5 10.5h4M8 1.5v13M6 4h4M6 9.5h4M12.5 1.5v13M10.5 6h4M10.5 11.5h4" />
                       </svg>
                     )}
                     {pillar.tagIcon === 'arena' && (
                       <svg viewBox="0 0 16 16" fill="currentColor" className="pillar-tag-svg" aria-hidden="true">
-                        <rect x="2" y="9" width="3" height="6" rx="0.8" />
-                        <rect x="6.5" y="5.5" width="3" height="9.5" rx="0.8" />
-                        <rect x="11" y="2" width="3" height="13" rx="0.8" />
+                        <rect x="2" y="9" width="3.2" height="6" rx="0.9" />
+                        <rect x="6.4" y="5" width="3.2" height="10" rx="0.9" />
+                        <rect x="10.8" y="1.5" width="3.2" height="13.5" rx="0.9" />
                       </svg>
                     )}
                     <span>{pillar.tag}</span>

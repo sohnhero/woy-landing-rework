@@ -534,16 +534,16 @@ p{color:#554c3b}
 .ecosystem-section .container {
   position: relative;
   z-index: 1;
-  width: min(1360px, calc(100% - 48px));
-  max-width: 1360px;
+  width: min(1440px, calc(100% - 48px));
+  max-width: 1440px;
 }
 
 .pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 26px;
   align-items: stretch;
-  margin-top: 48px;
+  margin-top: 52px;
 }
 
 /* Multi-plane Parallax Wrapper */
@@ -566,20 +566,23 @@ p{color:#554c3b}
   }
 }
 
-/* Card Styling - Horizontal 2-Column Split matching mockup */
+/* Card Styling - Grand Horizontal 3D Card */
 .pillar-card {
   position: relative;
   display: grid !important;
-  grid-template-columns: 1.25fr 0.85fr !important;
+  grid-template-columns: 1.18fr 0.94fr !important;
   align-items: center !important;
-  gap: 8px !important;
+  gap: 12px !important;
   height: 100%;
-  min-height: 250px;
-  border-radius: 28px !important;
-  background: linear-gradient(155deg, #ffffff 0%, #fdfbf7 55%, #f9f4ea 100%) !important;
-  border: 1.5px solid rgba(226, 198, 144, 0.65) !important;
-  box-shadow: 0 14px 36px rgba(150, 110, 30, 0.08), inset 0 2px 2px #ffffff !important;
-  padding: 24px 16px 22px 22px !important;
+  min-height: 320px !important;
+  border-radius: 30px !important;
+  background: linear-gradient(150deg, #ffffff 0%, #fdfbf7 45%, #f7f0e0 100%) !important;
+  border: 1.5px solid rgba(222, 192, 134, 0.72) !important;
+  box-shadow: 0 18px 46px rgba(140, 95, 25, 0.09),
+              0 4px 14px rgba(140, 95, 25, 0.04),
+              inset 0 2px 3px #ffffff,
+              inset 0 -2px 5px rgba(210, 175, 110, 0.16) !important;
+  padding: 30px 22px 28px 30px !important;
   transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
               transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
               filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
@@ -604,9 +607,12 @@ p{color:#554c3b}
 }
 
 .pillar-card:hover {
-  transform: translateY(-6px) scale(1.012);
-  border-color: #d8a842 !important;
-  box-shadow: 0 24px 50px rgba(175, 125, 35, 0.16), 0 0 0 1px rgba(220, 175, 75, 0.3), inset 0 2px 2px #ffffff !important;
+  transform: translateY(-8px) scale(1.015);
+  border-color: #d8a538 !important;
+  box-shadow: 0 30px 65px rgba(160, 110, 25, 0.18),
+              0 8px 22px rgba(160, 110, 25, 0.08),
+              inset 0 2px 3px #ffffff,
+              inset 0 -2px 5px rgba(210, 175, 110, 0.22) !important;
 }
 
 /* Left Column: Content */
@@ -616,7 +622,7 @@ p{color:#554c3b}
   align-items: flex-start !important;
   justify-content: space-between !important;
   height: 100% !important;
-  min-height: 210px !important;
+  min-height: 250px !important;
   z-index: 2;
   min-width: 0 !important;
 }
@@ -624,18 +630,18 @@ p{color:#554c3b}
 .pillar-tag {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 5px !important;
+  gap: 7px !important;
   white-space: nowrap !important;
-  font: 800 9px/1.2 var(--font-display, Manrope, sans-serif) !important;
-  letter-spacing: 0.4px !important;
+  font: 850 11px/1.2 var(--font-display, Manrope, sans-serif) !important;
+  letter-spacing: 0.5px !important;
   text-transform: uppercase !important;
-  color: #7b4f18 !important;
-  background: rgba(247, 239, 224, 0.92) !important;
-  border: 1px solid rgba(220, 192, 138, 0.65) !important;
-  padding: 4px 9px !important;
+  color: #633c08 !important;
+  background: linear-gradient(135deg, #fdf8ed 0%, #f7eccf 100%) !important;
+  border: 1.5px solid rgba(215, 175, 95, 0.65) !important;
+  padding: 6px 13px !important;
   border-radius: 999px !important;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02) !important;
-  margin-bottom: 8px !important;
+  box-shadow: 0 2px 6px rgba(140, 95, 25, 0.08), inset 0 1px 0 #ffffff !important;
+  margin-bottom: 12px !important;
   flex-shrink: 0 !important;
 }
 
@@ -644,19 +650,19 @@ p{color:#554c3b}
 }
 
 .pillar-tag-svg {
-  width: 12px !important;
-  height: 12px !important;
+  width: 15px !important;
+  height: 15px !important;
   flex-shrink: 0 !important;
 }
 
 .pillar-title {
   font-family: var(--font-display, Manrope, sans-serif) !important;
-  font-size: 19px !important;
-  line-height: 1.16 !important;
-  color: #1a140a !important;
-  margin: 0 0 8px 0 !important;
-  font-weight: 850 !important;
-  letter-spacing: -0.015em !important;
+  font-size: clamp(21px, 1.5vw, 24px) !important;
+  line-height: 1.15 !important;
+  color: #161007 !important;
+  margin: 0 0 10px 0 !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
   text-transform: uppercase !important;
 }
 
@@ -666,49 +672,51 @@ p{color:#554c3b}
 
 .pillar-desc {
   font-family: var(--font-body, 'DM Sans', sans-serif) !important;
-  font-size: 12.5px !important;
-  line-height: 1.48 !important;
-  color: #554838 !important;
-  margin: 0 0 16px 0 !important;
-  max-width: 230px !important;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+  font-weight: 450 !important;
+  color: #493d2e !important;
+  margin: 0 0 20px 0 !important;
+  max-width: 270px !important;
 }
 
 .pillar-cta {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 8px !important;
+  gap: 9px !important;
   margin-top: auto !important;
-  background: #8b551e !important;
+  background: linear-gradient(135deg, #844c14 0%, #68380a 100%) !important;
   color: #ffffff !important;
-  border: none !important;
+  border: 1px solid rgba(255, 230, 180, 0.3) !important;
   border-radius: 999px !important;
-  padding: 8px 18px !important;
+  padding: 10px 22px !important;
   font-family: var(--font-display, Manrope, sans-serif) !important;
-  font-size: 11.5px !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.2px !important;
+  font-size: 12.5px !important;
+  font-weight: 750 !important;
+  letter-spacing: 0.3px !important;
   cursor: pointer !important;
-  box-shadow: 0 4px 14px rgba(139, 85, 30, 0.22) !important;
-  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+  box-shadow: 0 6px 18px rgba(110, 60, 10, 0.28), inset 0 1px 1px rgba(255, 255, 255, 0.25) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
   user-select: none !important;
 }
 
 .pillar-cta:hover {
-  background: #734313 !important;
-  transform: translateY(-1px) scale(1.02) !important;
-  box-shadow: 0 6px 18px rgba(139, 85, 30, 0.32) !important;
+  background: linear-gradient(135deg, #965618 0%, #78400c 100%) !important;
+  transform: translateY(-2px) scale(1.03) !important;
+  box-shadow: 0 10px 24px rgba(110, 60, 10, 0.36), inset 0 1px 1px rgba(255, 255, 255, 0.35) !important;
 }
 
 .pillar-cta-arrow {
-  font-size: 13px !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
   line-height: 1 !important;
   display: inline-block !important;
   transition: transform 0.25s ease !important;
 }
 
 .pillar-cta:hover .pillar-cta-arrow {
-  transform: translateX(3px) !important;
+  transform: translateX(4px) !important;
 }
 
 /* Right Column: 3D Asset Stage with glowing backdrop */
@@ -716,46 +724,62 @@ p{color:#554c3b}
   position: relative !important;
   width: 100% !important;
   height: 100% !important;
-  min-height: 195px !important;
+  min-height: 250px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   margin-bottom: 0 !important;
+  perspective: 800px !important;
 }
 
 .pillar-stage-glow {
   position: absolute !important;
-  width: 155px !important;
-  height: 155px !important;
+  width: 220px !important;
+  height: 220px !important;
   border-radius: 50% !important;
-  background: radial-gradient(circle, rgba(235, 190, 95, 0.38) 0%, rgba(235, 190, 95, 0) 70%) !important;
+  background: radial-gradient(circle, rgba(240, 195, 85, 0.48) 0%, rgba(240, 195, 85, 0.18) 45%, transparent 72%) !important;
+  filter: blur(8px) !important;
   pointer-events: none !important;
   z-index: 0 !important;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease !important;
 }
 
 .pillar-3d-img {
   position: relative !important;
   z-index: 1 !important;
   width: 100% !important;
-  max-width: 175px !important;
-  max-height: 195px !important;
+  max-width: 240px !important;
+  max-height: 260px !important;
   object-fit: contain !important;
-  filter: drop-shadow(0 10px 22px rgba(140, 95, 20, 0.16)) !important;
+  filter: drop-shadow(0 20px 28px rgba(110, 75, 15, 0.22))
+          drop-shadow(0 6px 12px rgba(80, 50, 10, 0.12)) !important;
   display: block !important;
   margin: 0 auto !important;
   transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) !important;
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              filter 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .js .reveal:not(.visible).pillar-card .pillar-3d-img {
   opacity: 0;
-  transform: scale(0.9) translateY(12px);
+  transform: scale(0.9) translateY(16px);
 }
 
 .pillar-card.visible .pillar-3d-img {
   opacity: 1;
   transform: scale(1) translateY(0);
   transition-delay: calc(var(--card-stagger, 0s) + 0.1s);
+}
+
+.pillar-card:hover .pillar-3d-img {
+  transform: translateY(-8px) scale(1.06) rotate3d(0, 1, 0, 2deg) !important;
+  filter: drop-shadow(0 26px 36px rgba(110, 75, 15, 0.28))
+          drop-shadow(0 8px 16px rgba(80, 50, 10, 0.15)) !important;
+}
+
+.pillar-card:hover .pillar-stage-glow {
+  transform: scale(1.18) !important;
+  opacity: 0.95 !important;
 }
 
 /* Section 04: L’esprit WÔY — 3D Value Pills */
@@ -1999,29 +2023,38 @@ p{color:#554c3b}
     padding: 95px 0 !important;
   }
   .pillars-grid {
-    gap: 16px !important;
+    gap: 18px !important;
   }
   .pillar-card {
-    grid-template-columns: 1.28fr 0.82fr !important;
-    padding: 22px 14px 20px 18px !important;
-    gap: 6px !important;
+    grid-template-columns: 1.18fr 0.94fr !important;
+    padding: 26px 18px 24px 24px !important;
+    gap: 10px !important;
+    min-height: 295px !important;
   }
   .pillar-tag {
-    font-size: 8.5px !important;
-    letter-spacing: 0.3px !important;
-    padding: 3.5px 8px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.4px !important;
+    padding: 5px 11px !important;
     white-space: nowrap !important;
   }
+  .pillar-tag-svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
   .pillar-title {
-    font-size: 17px !important;
+    font-size: 19px !important;
   }
   .pillar-desc {
-    font-size: 11.8px !important;
-    max-width: 200px !important;
+    font-size: 12.8px !important;
+    max-width: 240px !important;
   }
   .pillar-3d-img {
-    max-width: 155px !important;
-    max-height: 180px !important;
+    max-width: 210px !important;
+    max-height: 225px !important;
+  }
+  .pillar-stage-glow {
+    width: 190px !important;
+    height: 190px !important;
   }
 
   /* Spirit Section */
@@ -2268,34 +2301,46 @@ p{color:#554c3b}
   }
   .pillars-grid {
     grid-template-columns: 1fr !important;
-    max-width: 620px !important;
+    max-width: 680px !important;
     margin-inline: auto !important;
-    gap: 20px !important;
+    gap: 24px !important;
   }
   .pillar-parallax-wrap {
     transform: none !important;
   }
   .pillar-card {
-    grid-template-columns: 1.2fr 0.9fr !important;
-    padding: 24px 22px 22px 26px !important;
-    border-radius: 28px !important;
-    min-height: 230px !important;
+    grid-template-columns: 1.18fr 0.94fr !important;
+    padding: 30px 24px 26px 30px !important;
+    border-radius: 30px !important;
+    min-height: 290px !important;
   }
   .pillar-stage {
-    min-height: 190px !important;
+    min-height: 240px !important;
     height: 100% !important;
     margin-bottom: 0 !important;
   }
   .pillar-3d-img {
-    max-width: 175px !important;
-    max-height: 190px !important;
+    max-width: 230px !important;
+    max-height: 245px !important;
+  }
+  .pillar-stage-glow {
+    width: 210px !important;
+    height: 210px !important;
   }
   .pillar-title {
-    font-size: 20px !important;
+    font-size: 22px !important;
   }
   .pillar-desc {
-    font-size: 13px !important;
-    max-width: 280px !important;
+    font-size: 13.5px !important;
+    max-width: 300px !important;
+  }
+  .pillar-tag {
+    font-size: 11px !important;
+    padding: 6px 12px !important;
+  }
+  .pillar-tag-svg {
+    width: 15px !important;
+    height: 15px !important;
   }
 
   /* Spirit & Closing */
@@ -2741,7 +2786,7 @@ p{color:#554c3b}
   }
   .pillars-grid {
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    gap: 24px !important;
     max-width: 480px !important;
     margin-inline: auto !important;
   }
@@ -2751,15 +2796,15 @@ p{color:#554c3b}
   }
   .pillar-card {
     grid-template-columns: 1fr !important;
-    padding: 24px 20px 20px !important;
-    border-radius: 26px !important;
+    padding: 28px 24px 24px !important;
+    border-radius: 28px !important;
     min-height: auto !important;
-    gap: 16px !important;
+    gap: 18px !important;
   }
   .pillar-stage {
     order: 1 !important;
-    height: 160px !important;
-    min-height: 160px !important;
+    height: 200px !important;
+    min-height: 200px !important;
     margin-bottom: 0 !important;
   }
   .pillar-body {
@@ -2768,14 +2813,18 @@ p{color:#554c3b}
   }
   .pillar-desc {
     max-width: 100% !important;
-    margin-bottom: 14px !important;
+    margin-bottom: 16px !important;
   }
   .pillar-3d-img {
-    max-height: 155px !important;
-    max-width: 160px !important;
+    max-height: 195px !important;
+    max-width: 205px !important;
+  }
+  .pillar-stage-glow {
+    width: 190px !important;
+    height: 190px !important;
   }
   .pillar-title {
-    font-size: 20px !important;
+    font-size: 21px !important;
   }
   .pillar-cta {
     width: auto !important;
@@ -3007,25 +3056,26 @@ p{color:#554c3b}
     padding-block: 55px 40px !important;
   }
   .pillar-card {
-    padding: 18px 16px 16px !important;
-    border-radius: 22px !important;
+    padding: 22px 18px 20px !important;
+    border-radius: 24px !important;
   }
   .pillar-stage {
-    height: 140px !important;
-    min-height: 140px !important;
+    height: 170px !important;
+    min-height: 170px !important;
   }
   .pillar-3d-img {
-    max-height: 135px !important;
+    max-height: 165px !important;
+    max-width: 170px !important;
   }
   .pillar-title {
-    font-size: 18px !important;
+    font-size: 19px !important;
   }
   .pillar-desc {
-    font-size: 12px !important;
+    font-size: 13px !important;
   }
   .pillar-tag {
-    font-size: 9px !important;
-    padding: 3px 8px !important;
+    font-size: 10px !important;
+    padding: 4px 10px !important;
   }
 
   /* Footer on Small Mobile */

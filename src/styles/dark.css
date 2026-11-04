@@ -825,48 +825,60 @@ html.dark .ecosystem-ambient-glow {
 }
 
 html.dark .pillar-card {
-  background: linear-gradient(155deg, rgba(30, 24, 18, 0.98) 0%, rgba(20, 16, 12, 0.98) 60%, rgba(14, 11, 8, 0.98) 100%) !important;
-  border-color: rgba(218, 180, 95, 0.3) !important;
-  box-shadow: inset 0 1px 1px rgba(255, 230, 160, 0.08), 0 20px 48px rgba(0, 0, 0, 0.6) !important;
+  background: linear-gradient(150deg, rgba(32, 26, 18, 0.98) 0%, rgba(22, 18, 12, 0.98) 55%, rgba(14, 11, 7, 0.98) 100%) !important;
+  border-color: rgba(230, 190, 100, 0.35) !important;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.7),
+              0 4px 16px rgba(0, 0, 0, 0.4),
+              inset 0 1.5px 2px rgba(255, 235, 170, 0.14),
+              inset 0 -2px 6px rgba(0, 0, 0, 0.5) !important;
 }
 
 html.dark .pillar-card:hover {
-  border-color: #f5c453 !important;
-  box-shadow: inset 0 1px 1px rgba(255, 230, 160, 0.18), 0 26px 56px rgba(0, 0, 0, 0.7), 0 0 22px rgba(245, 196, 83, 0.22) !important;
+  border-color: #f7c756 !important;
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.8),
+              0 0 32px rgba(247, 199, 86, 0.25),
+              inset 0 1.5px 2px rgba(255, 235, 170, 0.22) !important;
 }
 
 html.dark .pillar-title {
-  color: #fcf9f2 !important;
+  color: #ffffff !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5) !important;
 }
 
 html.dark .pillar-desc {
-  color: #b8ac98 !important;
+  color: #cfc5b4 !important;
 }
 
 html.dark .pillar-tag {
-  background: rgba(245, 196, 83, 0.14) !important;
-  border-color: rgba(215, 175, 80, 0.35) !important;
-  color: #f5c453 !important;
+  background: linear-gradient(135deg, rgba(245, 196, 83, 0.2) 0%, rgba(200, 150, 45, 0.14) 100%) !important;
+  border: 1.5px solid rgba(245, 196, 83, 0.45) !important;
+  color: #f7ca5d !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 230, 160, 0.15) !important;
   white-space: nowrap !important;
 }
 
 html.dark .pillar-body .pillar-cta {
-  background: linear-gradient(110deg, #f5bd4c, #edb03a) !important;
-  color: #261c10 !important;
-  box-shadow: 0 4px 18px rgba(245, 189, 76, 0.28) !important;
+  background: linear-gradient(110deg, #f7c756, #e7ab2a) !important;
+  color: #241606 !important;
+  border: 1px solid rgba(255, 235, 170, 0.6) !important;
+  box-shadow: 0 6px 20px rgba(247, 199, 86, 0.32), inset 0 1px 1px rgba(255, 255, 255, 0.6) !important;
 }
 
 html.dark .pillar-body .pillar-cta:hover {
-  background: linear-gradient(110deg, #ffd066, #f5bd4c) !important;
-  box-shadow: 0 6px 22px rgba(245, 189, 76, 0.4) !important;
+  background: linear-gradient(110deg, #ffd36b, #f5b736) !important;
+  box-shadow: 0 10px 26px rgba(247, 199, 86, 0.45), inset 0 1px 1px #ffffff !important;
 }
 
 html.dark .pillar-stage-glow {
-  background: radial-gradient(circle, rgba(245, 196, 83, 0.25) 0%, rgba(245, 196, 83, 0) 70%) !important;
+  background: radial-gradient(circle, rgba(245, 196, 83, 0.35) 0%, rgba(245, 196, 83, 0.12) 50%, transparent 72%) !important;
 }
 
 html.dark .pillar-3d-img {
-  filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 20px rgba(245, 196, 83, 0.2)) !important;
+  filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 28px rgba(245, 196, 83, 0.26)) !important;
+}
+
+html.dark .pillar-card:hover .pillar-3d-img {
+  filter: drop-shadow(0 28px 44px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 38px rgba(245, 196, 83, 0.38)) !important;
 }
 
 /* ==========================================================================
