@@ -847,6 +847,7 @@ html.dark .pillar-tag {
   background: rgba(245, 196, 83, 0.14) !important;
   border-color: rgba(215, 175, 80, 0.35) !important;
   color: #f5c453 !important;
+  white-space: nowrap !important;
 }
 
 html.dark .pillar-body .pillar-cta {
